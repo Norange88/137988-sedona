@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Никита Гречишников](https://up.htmlacademy.ru/adaptive/8/user/137988).
-* Наставник: `Неизвестно`.
+* Наставник: `Макс Пушкарев`.
 
 ---
 
