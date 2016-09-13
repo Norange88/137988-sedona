@@ -2,11 +2,104 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Sedona</title>
+    <meta name='viewport' content='width=device-width'>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+      	<img class='main-navigation__logo' src="http://placehold.it/102x83" alt="logo">
+        <button class="main-navigation__open-btn">Открыть меню</button>
+        <nav class="main-navigation">
+          <ul class="main-navigation__list">
+            <li><a href="#" class="main-navigation__link">Главная</a></li>
+            <li><a href="#" class="main-navigation__link">Фото и видео</a></li>
+            <li><a href="#" class="main-navigation__link">Форма отзыва</a></li>
+            <li><a href="#" class="main-navigation__link">html academy</a></li>
+          </ul>
+          <button class="main-navigation__close-btn">Скрыть меню</button>
+        </nav>
+      </div>    
+    </header>
+    <!-- Main -->
+    <main>
+    <!-- Site intro -->
+    <section class="site-intro">
+      <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+    </section>
+    <!-- Features -->
+    <section class="features">
+      <div class="container">
+        <div class="features__item">
+          <h2>Настоящий городок</h2>
+          <p class="features__item-number">— №1 —</p>
+          <p class="features__item-promo-text">Седона не аттракцион для туристов, там течёт своя жизнь</p>
+          <div class="features__item-img">
+          	<img src="http://placehold.it/320x260" alt="">
+          </div>
+        </div>
+        <div class="features__item features__item--small">
+          <h2>Жильё</h2>
+          <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </div>
+        <div class="features__item features__item--small">
+          <h2>Сувениры</h2>
+          <p>Не только китайского, но и местного производства!</p>
+        </div>
+        <div class="features__item features__item--small">
+          <h2>Еда</h2>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </div>
+        <div class="features__item">
+          <h2>Там есть мост дъявола</h2>
+          <p class="features__item-number">— №2 —</p>
+          <p class="features__item-promo-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+          <div class="features__item-img">
+          	<img src="http://placehold.it/320x260" alt="">
+          </div>
+        </div>
+        <div class="features__item features__item--medium">
+          <h2>Небольшая площадь</h2>
+          <p class="features__item-number">— №3 —</p>
+          <p class="features__item-promo-text">Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="features__item features__item--medium">
+          <h2>Красивяа дорога</h2>
+          <p class="features__item-number">— №4 —</p>
+          <p class="features__item-promo-text">Ехать в седону из лас-вегаса совсем не скучно!</p>
+        </div>
+        <div class="features__item features__item--medium">
+          <h2>Мало туристов</h2>
+          <p class="features__item-number">— №5 —</p>
+          <p class="features__item-promo-text">Большинство едет в гранд каньони толпится там</p>
+        </div>
+        <section class="find-hotel">
+          <b>Заинтересовались?</b>
+          <p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <a href='#' class="find-hotel__btn btn">Найти гостиницу</a>
+        </section>
+      </div>
+    </section>
+    <!-- Map -->
+    <section class="map">
+      <div class="container">
+        <div id="map"></div>
+      </div>
+    </section>
+    </main>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p class='hashtag'>#visitSEDONA</p>
+        <div class="social">
+          <a href="#" class="social-btn social-btn--tw">Twitter</a>
+          <a href="#" class="social-btn social-btn--fb">Facebook</a>
+          <a href="#" class="social-btn social-btn--yt">Youtube</a>
+        </div>
+        <div class="site-footer__references">Разработано<a href='https://htmlacademy.ru' class="icon icon--academy"> HTML Academy</a></div>
+      </div> 
+    </footer>
   </body>
-</html>
+</html>  
