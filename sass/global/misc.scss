@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a, a:hover {text-decoration: none; color: inherit;}
+
+img {vertical-align: middle}
+
+h1, h2 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 800;
+  color: #000;
+}

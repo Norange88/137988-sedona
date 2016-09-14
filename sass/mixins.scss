@@ -1,0 +1,8 @@
+/* Шапка с надписью Sedona для формы и галереи */
+@mixin sedona-bg-compact {
+  padding-top: 160px;
+  background: url(../img/text-sedona.svg) no-repeat center top 50px,
+              url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 134px,
+              url(../img/bg-back-mobile@1x.jpg) no-repeat center top -229px;
+  background-size: 230px auto, 101% 26px, auto auto;
+}

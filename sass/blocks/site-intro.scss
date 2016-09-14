@@ -1,0 +1,20 @@
+.site-intro {
+  text-align: center;
+  padding: 0 10px 30px 10px;
+  line-height: 26px;
+
+  &__bg-wrap {
+    content: "";
+    height: 390px;
+    background: url(../img/text-sedona-index.svg) no-repeat center,
+                url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom,
+                url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
+    background-size: 280px auto, 101% 26px, auto;
+  }
+  &__headline {
+    margin-top: 40px;
+  }
+  &__paragraph {
+    margin-top: 30px;
+  }
+}

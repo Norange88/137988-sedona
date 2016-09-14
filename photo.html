@@ -9,18 +9,18 @@
   <body>
   	<!-- Header -->
     <header class="site-header">
+      <nav class="main-navigation">
+        <ul class="main-navigation__list">
+          <li><a href="#" class="main-navigation__link">Главная</a></li>
+          <li><a href="#" class="main-navigation__link">Фото и видео</a></li>
+          <li><a href="#" class="main-navigation__link">Форма отзыва</a></li>
+          <li><a href="#" class="main-navigation__link">html academy</a></li>
+        </ul>
+        <button class="main-navigation__close-btn">Скрыть меню</button>
+      </nav>
       <div class="container">
-        <img class='site-header__logo' src="http://placehold.it/102x83" alt="logo">
+        <img class='site-header__logo' src="img/logo-sedona-mobile.svg" alt="logo">
         <button class="site-header__navigation-open-btn">Открыть меню</button>
-        <nav class="main-navigation">
-          <ul class="main-navigation__list">
-            <li><a href="#" class="main-navigation__link">Главная</a></li>
-            <li><a href="#" class="main-navigation__link">Фото и видео</a></li>
-            <li><a href="#" class="main-navigation__link">Форма отзыва</a></li>
-            <li><a href="#" class="main-navigation__link">html academy</a></li>
-          </ul>
-          <button class="main-navigation__close-btn">Скрыть меню</button>
-        </nav>
       </div>
     </header>
     <!-- Main -->
@@ -32,7 +32,7 @@
 				<p class="gallery__intro">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
 				<div class="gallery__item">
 					<a class="gallery__item-link" href="#">
-            <img src="http://placehold.it/280x280" alt="photo-1">
+            <img src="img/photo-1-mobile@1x.jpg" alt="road">
           </a>
 					<p class="gallery__item-name">Неродные просторы</p>
 					<p class="gallery__item-author">Автор фото: Борис</p>
@@ -43,7 +43,7 @@
 				</div>
 				<div class="gallery__item">
 					<a class="gallery__item-link" href="#">
-            <img src="http://placehold.it/280x280" alt="photo-2">
+            <img src="img/photo-2-mobile@1x.jpg" alt="cactus">
           </a>
 					<p class="gallery__item-name">Местная растительность</p>
 					<p class="gallery__item-author">Автор фото: Сергей</p>
@@ -54,7 +54,7 @@
 				</div>
 				<div class="gallery__item">
 					<a class="gallery__item-link" href="#">
-            <img src="http://placehold.it/280x280" alt="photo-3">
+            <img src="img/photo-3-mobile@1x.jpg" alt="serpentine">
           </a>
 					<p class="gallery__item-name">Дорога на север</p>
 					<p class="gallery__item-author">Автор фото: Пётр</p>
@@ -65,7 +65,7 @@
 				</div>
 				<div class="gallery__item">
 					<a class="gallery__item-link" href="#">
-            <img src="http://placehold.it/280x280" alt="photo-4">
+            <img src="img/photo-4-mobile@1x.jpg" alt="devils-bridge">
           </a>
 					<p class="gallery__item-name">Мост Дьявола</p>
 					<p class="gallery__item-author">Автор фото: Антон</p>
@@ -80,9 +80,23 @@
     <section class="promo-video">
       <div class="container">
         <h2>Всё ещё сомневаетесь?</h2>
-        <p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-      </div>]
-      <div class="promo-video__video-wrap"></div>
+        <p class="promo-video__paragraph">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      </div>
+      <div class="promo-video__video-wrap">
+        <img src="img/video-mobile@1x.jpg" alt="video">
+        <div class="video-controls">
+          <div class="container">
+            <div class="video-controls__rewind-panel">
+             <input class="video-controls__rewind" type="range">
+            </div>
+            <div class="video-controls__btn-panel"></div>
+              <button class="video-controls__restart-btn">restart</button>
+              <button class="video-controls__cc-btn">cc</button>
+              <button class="video-controls__fullscreen-btn">fullscreen</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     </main>
   	<!-- Footer -->

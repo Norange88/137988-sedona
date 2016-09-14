@@ -1,0 +1,55 @@
+.features {
+  background-color: #fff;
+
+  &__item--large {
+    padding-top: 40px;
+    color: #fff;
+    background-color: #81b3d2;
+  }
+  &__item-number {
+    margin-top: 15px;
+  }
+  &__item-promo-text {
+    margin-top: 15px;
+  }
+  &__item-img {
+    content: "";
+    width: 280px;
+    height: 260px;
+    margin-top: 40px;
+    background-size: auto 100%;
+
+    &--city {
+      background: url(../../img/photo-city@1x.jpg) no-repeat center;
+    }
+    &--bridge {
+      background: url(../../img/photo-bridge@1x.jpg) no-repeat center;
+    }
+  }
+
+  &__item--small {
+    text-align: left;
+    padding: 35px 15px 0 45px;
+
+    & >p {
+      margin-top: 15px;
+    }
+    &-last {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item--medium {
+    padding: 20px;
+    border-bottom: 1px solid #d6d6d6;
+
+    &-last {
+      border-bottom: none;
+    }
+  }
+
+  &__items-block--grey {
+    background-color: #eeeeee;
+  }
+}
+

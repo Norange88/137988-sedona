@@ -1,0 +1,28 @@
+.main-navigation {
+  background-color: #81b3d2;
+
+  &__list {
+    list-style: none;
+
+    & >li {
+    border-bottom: 1px solid #678fa8;
+    border-top: 1px solid #9ac2db;
+    }
+    & >li:first-child {
+      border-top: none;
+    }
+    & >li:last-child {
+      border-bottom: none;
+    }
+  }
+  &__link {
+    display: block;
+    padding: 8px 0;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+

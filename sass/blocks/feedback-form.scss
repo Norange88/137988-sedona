@@ -1,0 +1,99 @@
+.feedback {
+  @include sedona-bg-compact;
+
+  &__headline {
+    margin-top: 35px;
+  }
+  &__intro {
+    margin-top: 25px;
+    line-height: 24px;
+  }
+}
+
+.feedback-form {
+  text-align: left;
+  margin-top: 20px;
+  padding-bottom: 40px;
+
+  /* border тянется на всю ширину страницы, но ради него делить форму на секции
+     с контейнером в каждой мне показалось чрезмерным. Не знаю, как лучше */
+  & > fieldset {
+    border-top: 1px solid #e5e5e5;
+    padding-bottom: 25px;
+  }
+
+  &__fieldset-headline {
+    text-align: center;
+    margin-top: 20px;
+  }
+  & input[type="text"],
+  & input[type="tel"],
+  & input[type="email"],
+  & textarea {
+    padding: 18px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 800;
+    color: #000;
+    text-transform: none;
+    background-color: #f2f2f2;
+  }
+  & input[type="tel"],
+  & input[type="email"],
+  & textarea {
+    width: 100%;
+  }
+  &__user-name-item {
+    margin-top: 20px;
+  }
+  &__impressions-item {
+    margin-top: 40px;
+    padding-left: 75px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 800;
+    text-transform: none;
+  }
+  &__visited-places-item {
+    margin-top: 20px;
+    padding: 20px 0 20px 80px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 800;
+  }
+  &__textarea {
+    margin-top: 20px;
+    resize: none;
+  }
+  &__submit-btn {
+    margin-top: 30px;
+  }
+}
+
+/* Попытка разобраться с инпутами, как сделать изящнее не знаю */
+#name {
+  width: 230px;
+}
+#surname,
+#patronymic {
+  width: 193px;
+}
+label[for="name"],
+label[for="surname"],
+label[for="patronymic"] {
+  margin-right: 14px;
+}
+label[for="phone"],
+label[for="email"] {
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+label[for="phone"] {
+  margin-top: 25px;
+}
+label[for="email"] {
+  margin-top: 40px;
+}
+
+

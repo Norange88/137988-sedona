@@ -1,0 +1,18 @@
+.promo-video {
+  margin-top: 15px;
+  margin-bottom: 30px;
+
+  & > .container {
+    padding-top: 30px;
+    border-top: 1px solid #e5e5e5;
+  }
+  &__paragraph {
+    margin-top: 30px;
+    line-height: 24px;
+  }
+  &__video-wrap {
+    margin-top: 32px;
+  }
+}
+
+
