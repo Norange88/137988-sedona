@@ -1,14 +1,40 @@
+@import "../mixins.scss";
+
 .find-hotel {
   padding: 25px 5px 50px 5px;
+
+  &__wrap {
+    @include container;
+  }
 
   &__headline {
     font-size: 21px;
   }
+
   &__info {
     margin-top: 20px;
   }
+
   &__btn {
     margin-top: 35px;
+  }
+}
+
+/* Планшет */
+@media (min-width: 768px) {
+
+  .find-hotel {
+
+    &__wrap {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    &__headline {
+      margin-top: 30px;
+      font-size: 30px;
+      line-height: 36px;
+    }
   }
 }
 

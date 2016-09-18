@@ -1,6 +1,5 @@
 .site-intro {
   text-align: center;
-  padding: 0 10px 30px 10px;
   line-height: 26px;
 
   &__bg-wrap {
@@ -11,10 +10,34 @@
                 url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
     background-size: 280px auto, 101% 26px, auto;
   }
+
   &__headline {
     margin-top: 40px;
   }
+
   &__paragraph {
     margin-top: 30px;
+  }
+}
+
+/* Планшет */
+@media (min-width: 768px) {
+
+  .site-intro {
+
+    &__bg-wrap {
+      height: 518px;
+      background: url(../img/text-sedona-index.svg) no-repeat center,
+                  url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom,
+                  url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom,
+                  url(../img/back-desktop.jpg) no-repeat center bottom;
+      background-size: 450px auto, 700px 40px, 101% 26px, auto;
+    }
+
+    &__headline {
+      max-width: 630px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

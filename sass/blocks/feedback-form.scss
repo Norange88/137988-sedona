@@ -1,9 +1,12 @@
+@import "../mixins.scss";
+
 .feedback {
   @include sedona-bg-compact;
 
   &__headline {
     margin-top: 35px;
   }
+
   &__intro {
     margin-top: 25px;
     line-height: 24px;
@@ -15,10 +18,8 @@
   margin-top: 20px;
   padding-bottom: 40px;
 
-  /* border тянется на всю ширину страницы, но ради него делить форму на секции
-     с контейнером в каждой мне показалось чрезмерным. Не знаю, как лучше */
-  & > fieldset {
-    border-top: 1px solid #e5e5e5;
+  &__fieldset-wrap {
+    @include container;
     padding-bottom: 25px;
   }
 
@@ -26,6 +27,7 @@
     text-align: center;
     margin-top: 20px;
   }
+
   & input[type="text"],
   & input[type="tel"],
   & input[type="email"],
@@ -38,14 +40,18 @@
     text-transform: none;
     background-color: #f2f2f2;
   }
+
   & input[type="tel"],
   & input[type="email"],
   & textarea {
     width: 100%;
   }
+
   &__user-name-item {
     margin-top: 20px;
+    font-size: 0;
   }
+
   &__impressions-item {
     margin-top: 40px;
     padding-left: 75px;
@@ -54,6 +60,7 @@
     font-weight: 800;
     text-transform: none;
   }
+
   &__visited-places-item {
     margin-top: 20px;
     padding: 20px 0 20px 80px;
@@ -61,39 +68,218 @@
     line-height: 26px;
     font-weight: 800;
   }
+
   &__textarea {
     margin-top: 20px;
     resize: none;
   }
+
   &__submit-btn {
     margin-top: 30px;
   }
+
+  &__required-fields-tip {
+    display: none;
+  }
 }
 
-/* Попытка разобраться с инпутами, как сделать изящнее не знаю */
-#name {
-  width: 230px;
+input[name="name"] {
+  width: 85%;
 }
-#surname,
-#patronymic {
-  width: 193px;
+
+label[for="name"] {
+  width: 13%;
+  margin-right: 2%;
 }
+
+input[name="surname"],
+input[name="patronymic"] {
+  width: 73%;
+}
+
+label[for="surname"],
+label[for="patronymic"] {
+  width: 25%;
+  margin-right: 2%;
+}
+
+input[name="name"],
+input[name="surname"],
+input[name="patronymic"],
 label[for="name"],
 label[for="surname"],
 label[for="patronymic"] {
-  margin-right: 14px;
+  display: inline-block;
+  font-size: 14px;
 }
+
 label[for="phone"],
 label[for="email"] {
   display: block;
   margin-left: 20px;
   margin-bottom: 10px;
 }
+
 label[for="phone"] {
   margin-top: 25px;
 }
+
 label[for="email"] {
   margin-top: 40px;
+}
+
+/* Планшет */
+@media (min-width: 768px) {
+
+  .feedback {
+    @include sedona-bg-tablet;
+
+    &__headline {
+      margin-top: 70px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  .clearfix-wrapper {
+    @include clearfix;
+  }
+
+  .feedback-form {
+    @include container;
+
+    &__fieldset-wrap {
+      @include clearfix;
+      margin-bottom: 50px;
+      padding: 0;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    &__user-name {
+      float: right;
+      width: 50%;
+      height: 390px;
+
+      & > .feedback-form__fieldset-wrap {
+        padding-left: 17%;
+        border-top: none;
+        border-left: 1px solid #e5e5e5;
+      }
+    }
+
+    &__user-contacts {
+      float: left;
+      top: 390px;
+      width: 100%;
+    }
+
+    &__user-contacts-headline {
+      width: 400px;
+      margin: -14px auto 14px auto;
+      background-color: #fff;
+    }
+
+    &__impressions {
+      width: 50%;
+      height: 390px;
+
+      &-headline {
+        text-align: left;
+      }
+
+      &-item {
+        padding-left: 21%;
+      }
+
+      & > .feedback-form__fieldset-wrap {
+        border-top: none;
+      }
+    }
+
+    &__visited-places {
+
+      & > .feedback-form__fieldset-wrap {
+        @include clearfix;
+      }
+    }
+
+    &__visited-places-headline {
+      width: 400px;
+      margin: -28px auto 28px auto;
+      background-color: #fff;
+    }
+
+    &__visited-places-item {
+      float: left;
+      width: 50%;
+
+      &:nth-of-type(2n+1) {
+        text-align: right;
+        padding-right: 6%;
+      }
+
+      &:nth-of-type(2n) {
+        text-align: left;
+        padding-left: 16.6%;
+      }
+    }
+
+    &__additional-info-headline  {
+      width: 400px;
+      margin: -14px auto 14px auto;
+      background-color: #fff;
+    }
+
+    &__submit-btn {
+      float: left;
+      width: 50%;
+    }
+
+    &__required-fields-tip {
+      float: right;
+      display: block;
+      margin-top: 50px;
+    }
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1200px) {
+
+  .feedback-form {
+
+    &__impressions-headline {
+      text-align: center;
+    }
+
+    &__user-contacts {
+      padding-bottom: 30px;
+    }
+
+    &__user-contacts-item {
+      float: left;
+      width: 50%;
+    }
+
+    &__user-contacts-phone {
+      padding-right: 8%;
+    }
+
+    &__visited-places-item {
+
+      &:nth-of-type(2n+1),
+      &:nth-of-type(2n) {
+        text-align: left;
+        width: 25%;
+        padding-right: 0;
+        padding-left: 8.3%;
+      }
+    }
+  }
+
+  label[for="email"] {
+    margin-top: 25px;
+  }
 }
 
 

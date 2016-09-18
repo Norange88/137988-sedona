@@ -1,19 +1,20 @@
+@import "../mixins.scss";
+
 .main-navigation {
   background-color: #81b3d2;
 
   &__list {
     list-style: none;
-
-    & >li {
+  }
+  &__list-item {
     border-bottom: 1px solid #678fa8;
     border-top: 1px solid #9ac2db;
-    }
-    & >li:first-child {
-      border-top: none;
-    }
-    & >li:last-child {
-      border-bottom: none;
-    }
+  }
+  &__list-item:first-child {
+    border-top: none;
+  }
+  &__list-item:last-child {
+    border-bottom: none;
   }
   &__link {
     display: block;
@@ -23,6 +24,37 @@
     line-height: 40px;
     text-transform: uppercase;
     color: #fff;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .main-navigation {
+    @include clearfix;
+    background-color: #fff;
+
+    &__list-item {
+      float: left;
+      width: 20%;
+      border: none;
+    }
+
+    &__list-item:last-child {
+      margin-right: 0;
+    }
+
+    &__list-item:nth-child(2) {
+      margin-right: 20%;
+    }
+
+    &__link {
+      font-size: 14px;
+      color: #000;
+    }
+
+    &__close-btn {
+      display: none;
+    }
   }
 }
 

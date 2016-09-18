@@ -1,6 +1,18 @@
 .container {
-  max-width: 320px;
-  margin: 0 auto;
+  width: auto;
   padding: 0 20px;
+}
+
+/* Планшет */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 120px;
+  }
 }
 

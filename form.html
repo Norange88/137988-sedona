@@ -11,15 +11,15 @@
     <header class="site-header">
       <nav class="main-navigation">
         <ul class="main-navigation__list">
-          <li><a href="#" class="main-navigation__link">Главная</a></li>
-          <li><a href="#" class="main-navigation__link">Фото и видео</a></li>
-          <li><a href="#" class="main-navigation__link">Форма отзыва</a></li>
-          <li><a href="#" class="main-navigation__link">html academy</a></li>
+          <li class="main-navigation__list-item"><a href="#" class="main-navigation__link">Главная</a></li>
+          <li class="main-navigation__list-item"><a href="#" class="main-navigation__link">Фото и видео</a></li>
+          <li class="main-navigation__list-item"><a href="#" class="main-navigation__link">Форма отзыва</a></li>
+          <li class="main-navigation__list-item"><a href="#" class="main-navigation__link">html academy</a></li>
         </ul>
         <button class="main-navigation__close-btn">Скрыть меню</button>
       </nav>
       <div class="container">
-        <img class='site-header__logo' src="img/logo-sedona-mobile.svg" alt="logo">
+        <div class="site-header__logo-wrap"></div>
         <button class="site-header__navigation-open-btn">Открыть меню</button>
       </div>
     </header>
@@ -30,53 +30,60 @@
     	<div class="container">
 				<h1 class='feedback__headline'>Оставьте свой отзыв</h1>
 				<p class='feedback__intro'>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-				<form action="" class="feedback-form">
-					<fieldset class='feedback-form__user-name'>
-						<h2 class='feedback-form__fieldset-headline'>Представьтесь, пожалуйста</h2>
-						<div class="feedback-form__user-name-item">
-							<label for='name'>Имя:</label>
-							<input type="text" id='name' name='name' placeholder='Петр'>
-						</div>
-						<div class="feedback-form__user-name-item">
-							<label for='surname'>Фамилия:</label>
-							<input type="text" id='surname' name='surname' placeholder='Иванов'>
-						</div>
-						<div class="feedback-form__user-name-item">
-							<label for='patronymic'>Отчество:</label>
-							<input type="text" id='patronymic' name='patronymic' placeholder='Александрович'>
-						</div>
-					</fieldset>
-					<fieldset class='feedback-form__user-contacts'>
-						<h2 class='feedback-form__fieldset-headline'>Контактная информация</h2>
-						<div class="feedback-form__user-contacts-item">
-							<label for='phone'>Контактный телефон</label>
-							<input type="tel" id='phone' name='phone' placeholder='Введите телефон'>
-						</div>
-						<div class="feedback-form__user-contacts-item">
-							<label for='email'>Электронная почта</label>
-							<input type="email" id='email' name='email' placeholder='Введите e-mail'>
-						</div>
-					</fieldset>
-					<!-- В этом блоке альтернативные радио-кнопки будут заданы фоновой картинкой в label,
-					которая будет меняться через стили в input[type='radio']:checked+label -->
-					<fieldset class='feedback-form__impressions'>
-						<h2 class='feedback-form__fieldset-headline'>Ваше общее впечатление</h2>
-						<div class="feedback-form__impressions-item">
-							<input id='good' type="radio" name='impressions' value='good'>
-							<label for="good">Скорее положительное</label>
-						</div>
-						<div class="feedback-form__impressions-item">
-							<input id='bad' type="radio" name='impressions' value='bad'>
-							<label for="bad">Скорее отрицательное</label>
-						</div>
-						<div class="feedback-form__impressions-item">
-							<input id='dont-know' type="radio" name='impressions' value='dont-know'>
-							<label for="dont-know">Затрудняюсь ответить</label>
-						</div>
-					</fieldset>
-					<!-- Аналогично с блоком impressions -->
-					<fieldset class='feedback-form__visited-places'>
-						<h2 class='feedback-form__fieldset-headline'>Посещенные достопримечательности</h2>
+      </div>
+			<form action="" class="feedback-form">
+        <div class="clearfix-wrapper">
+  				<fieldset class='feedback-form__user-name'>
+            <div class="feedback-form__fieldset-wrap">
+  						<h2 class='feedback-form__fieldset-headline'>Представьтесь, пожалуйста</h2>
+  						<div class="feedback-form__user-name-item">
+  							<label for='name'>Имя:</label>
+  							<input type="text" id='name' name='name' placeholder='Петр'>
+  						</div>
+  						<div class="feedback-form__user-name-item">
+  							<label for='surname'>Фамилия:</label>
+  							<input type="text" id='surname' name='surname' placeholder='Иванов'>
+  						</div>
+  						<div class="feedback-form__user-name-item">
+  							<label for='patronymic'>Отчество:</label>
+  							<input type="text" id='patronymic' name='patronymic' placeholder='Александрович'>
+  						</div>
+            </div>
+  				</fieldset>
+  				<fieldset class='feedback-form__user-contacts'>
+            <div class="feedback-form__fieldset-wrap">
+  						<h2 class='feedback-form__user-contacts-headline feedback-form__fieldset-headline'>Контактная информация</h2>
+  						<div class="feedback-form__user-contacts-item feedback-form__user-contacts-phone">
+  							<label for='phone'>Контактный телефон</label>
+  							<input type="tel" id='phone' name='phone' placeholder='Введите телефон'>
+  						</div>
+  						<div class="feedback-form__user-contacts-item">
+  							<label for='email'>Электронная почта</label>
+  							<input type="email" id='email' name='email' placeholder='Введите e-mail'>
+  						</div>
+            </div>
+  				</fieldset>
+  				<fieldset class='feedback-form__impressions'>
+            <div class="feedback-form__fieldset-wrap">
+  					  <h2 class='feedback-form__impressions-headline feedback-form__fieldset-headline'>Ваше общее впечатление</h2>
+  						<div class="feedback-form__impressions-item">
+  							<input id='good' type="radio" name='impressions' value='good'>
+  							<label for="good">Скорее положительное</label>
+  						</div>
+  						<div class="feedback-form__impressions-item">
+  							<input id='bad' type="radio" name='impressions' value='bad'>
+  							<label for="bad">Скорее отрицательное</label>
+  						</div>
+  						<div class="feedback-form__impressions-item">
+  							<input id='dont-know' type="radio" name='impressions' value='dont-know'>
+  							<label for="dont-know">Затрудняюсь ответить</label>
+  						</div>
+            </div>
+  				</fieldset>
+        </div>
+				<fieldset class='feedback-form__visited-places'>
+          <div class="feedback-form__fieldset-wrap">
+						<h2 class='feedback-form__visited-places-headline feedback-form__fieldset-headline'>Посещенные достопримечательности</h2>
 						<div class="feedback-form__visited-places-item">
 							<input id='diablo-bridge' type='checkbox' value='diablo-bridge'>
 							<label for="diablo-bridge">Мост Дьявола</label>
@@ -93,23 +100,26 @@
 							<input id='red-rocks' type='checkbox' value='red-rocks'>
 							<label for="red-rocks">Красные скалы</label>
 						</div>
-					</fieldset>
-					<fieldset class='feedback-form__additional-info'>
-						<label for="additional-info">
-							<h2 class='feedback-form__fieldset-headline'>Опишите свои эмоции</h2>
-						</label>
-						<textarea class="feedback-form__textarea" name="additional-info" id="additional-info" cols="30" rows="6" placeholder='Опишите подробно все свои восторги'></textarea>
-					</fieldset>
-					<button type="submit" class='feedback-form__submit-btn btn'>Отправить отзыв</button>
-				</form>
-    	</div>
+          </div>
+				</fieldset>
+				<fieldset class='feedback-form__additional-info'>
+          <div class="feedback-form__fieldset-wrap">
+  					<label for="additional-info">
+  						<h2 class='feedback-form__additional-info-headline feedback-form__fieldset-headline'>Опишите свои эмоции</h2>
+  					</label>
+  					<textarea class="feedback-form__textarea" name="additional-info" id="additional-info" cols="30" rows="6" placeholder='Опишите подробно все свои восторги'></textarea>
+            <button type="submit" class='feedback-form__submit-btn btn'>Отправить отзыв</button>
+            <div class="feedback-form__required-fields-tip">* — обязательные поля</div>
+          </div>
+				</fieldset>
+			</form>
     </section>
 		</main>
 		<!-- Footer -->
     <footer class="site-footer">
       <div class="container">
-        <p class='hashtag'>#visitSEDONA</p>
-        <div class="social">
+        <p class='site-footer__hashtag hashtag'>#visitSEDONA</p>
+        <div class="site-footer__social social">
           <a href="#" class="social-btn social-btn--tw">Twitter</a>
           <a href="#" class="social-btn social-btn--fb">Facebook</a>
           <a href="#" class="social-btn social-btn--yt">Youtube</a>

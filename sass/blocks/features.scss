@@ -1,4 +1,7 @@
+@import "../mixins.scss";
+
 .features {
+  margin-top: 30px;
   background-color: #fff;
 
   &__item--large {
@@ -6,25 +9,48 @@
     color: #fff;
     background-color: #81b3d2;
   }
+
+  &__item-headline {
+    margin-top: 40px;
+    color: #fff;
+  }
+
+  &__item--first {
+    position: relative;
+  }
+
+  &__item--first {
+    background: #81b3d2 url(../img/bg-triangle.svg) no-repeat center top;
+    background-size: 100% 26px;
+  }
+
   &__item-number {
     margin-top: 15px;
   }
+
   &__item-promo-text {
     margin-top: 15px;
   }
-  &__item-img {
+
+  &__item-img-wrap {
     content: "";
-    width: 280px;
-    height: 260px;
-    margin-top: 40px;
-    background-size: auto 100%;
+    width: auto;
+    min-height: 280px;
+    margin: 40px -20px 0 -20px;
+    background-size: cover;
 
     &--city {
-      background: url(../../img/photo-city@1x.jpg) no-repeat center;
+      background: url(../img/photo-city@1x.jpg) no-repeat center;
     }
     &--bridge {
-      background: url(../../img/photo-bridge@1x.jpg) no-repeat center;
+      background: url(../img/photo-bridge@1x.jpg) no-repeat center;
     }
+  }
+
+  &__small-items-wrap,
+  &__large-item-wrap,
+  &__medium-items-wrap {
+    @include container;
   }
 
   &__item--small {
@@ -50,6 +76,97 @@
 
   &__items-block--grey {
     background-color: #eeeeee;
+  }
+}
+
+/* Планшет */
+/* Пытался сделать красиво без флексбоксов, чтобы внутри блока item--large картинка
+ всегда была одной высоты с блоком текста, но css таблицы плохо подружились с флоатами и
+ попытками задать min-height, пришлось ставить фиксированную.
+ Нужен совет, или можно оставить так до внедрения в макет флекса */
+
+@media (min-width: 768px) {
+
+  .features {
+    margin-top: 55px;
+
+    &__item--large {
+      min-height: 256px;
+      padding-top: 0;
+    }
+
+    &__item-headline {
+      margin-top: 0;
+    }
+
+    &__item--first {
+      background: #81b3d2;
+    }
+
+    &__item-text-wrap {
+      display: table-cell;
+      vertical-align: middle;
+      width: 33.3%;
+      height: 256px;
+      padding: 42px;
+
+      &--right-float {
+        float: right;
+      }
+    }
+
+    &__item-img-wrap {
+      display: table-cell;
+      vertical-align: middle;
+      width: 66.6%;
+      margin: 0;
+      background-size: cover;
+
+      &--left-float {
+        float: left;
+      }
+    }
+
+    &__small-items-wrap,
+    &__large-item-wrap,
+    &__medium-items-wrap {
+      @include clearfix;
+    }
+
+    &__large-item-wrap {
+      display: table;
+      width: 100%;
+      padding: 0;
+    }
+
+    &__item--small {
+      float: left;
+      text-align: center;
+      width: 33.33%;
+      padding: 155px 35px 55px 35px;
+    }
+
+    &__item--small > h2 {
+      font-size: 21px;
+    }
+
+    &__item--small--last {
+      float: none;
+    }
+
+    &__medium-items-wrap {
+      padding: 0;
+    }
+
+    &__item--medium {
+      float: left;
+      width: 33.33%;
+      padding: 45px;
+      border: none;
+    }
+    &__item--medium > h2 {
+      word-spacing: 200px;
+    }
   }
 }
 

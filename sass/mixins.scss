@@ -1,8 +1,44 @@
-/* Шапка с надписью Sedona для формы и галереи */
+/* Шапка с надписью Sedona для мобильной формы и галереи */
 @mixin sedona-bg-compact {
   padding-top: 160px;
   background: url(../img/text-sedona.svg) no-repeat center top 50px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 134px,
               url(../img/bg-back-mobile@1x.jpg) no-repeat center top -229px;
   background-size: 230px auto, 101% 26px, auto auto;
+}
+
+/* Шапка с надписью Sedona для планшетной формы и галереи */
+@mixin sedona-bg-tablet {
+  padding-top: 290px;
+  background: url(../img/text-sedona.svg) no-repeat center top 95px,
+              url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 250px,
+              url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 264px,
+              url(../img/back-desktop.jpg) no-repeat center top -228px;
+  background-size: 480px auto, 700px 40px, 101% 26px, auto;
+}
+
+/* Контейнер */
+@mixin container {
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: 768px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+/* Clearfix */
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }

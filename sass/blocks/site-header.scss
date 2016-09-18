@@ -1,0 +1,45 @@
+@import "../mixins.scss";
+
+.site-header {
+
+  &__logo-wrap {
+    content: "";
+    width: 100px;
+    height: 80px;
+    margin: 0 auto;
+    background: url(../img/logo-sedona-mobile.svg) no-repeat center;
+  }
+}
+
+/* Планшет */
+@media (min-width: 768px) {
+
+  .site-header {
+    position: relative;
+
+    &__navigation-open-btn {
+      display: none;
+    }
+
+    &__logo-wrap {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -50px;
+    }
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1200px) {
+
+  .site-header {
+
+    &__logo-wrap {
+      width: 188px;
+      height: 96px;
+      margin-left: -94px;
+      background: url(../img/logotype-desktop.png) no-repeat center;
+    }
+  }
+}
