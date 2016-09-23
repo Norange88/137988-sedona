@@ -1,172 +1,230 @@
 @import "../mixins.scss";
 
 .features {
-  margin-top: 30px;
-  background-color: #fff;
+  margin-top: 18px;
+}
 
-  &__item--large {
-    padding-top: 40px;
-    color: #fff;
-    background-color: #81b3d2;
-  }
+.features__item--large {
+  color: #fff;
+  border-top: 1px solid transparent;
+  background-color: #81b3d2;
+}
 
-  &__item-headline {
-    margin-top: 40px;
-    color: #fff;
-  }
+.features__item-headline {
+  margin-top: 37px;
+  color: #fff;
+}
 
-  &__item--first {
-    position: relative;
-  }
+.features__item--first {
+  padding-top: 26px;
+  background: #81b3d2 url(../img/bg-triangle.svg) no-repeat center top -1px;
+  background-size: 100% 26px;
+}
 
-  &__item--first {
-    background: #81b3d2 url(../img/bg-triangle.svg) no-repeat center top;
-    background-size: 100% 26px;
-  }
+.features__item-number {
+  margin-top: 10px;
+}
 
-  &__item-number {
-    margin-top: 15px;
-  }
+.features__item-promo-text {
+  margin-top: 15px;
+}
 
-  &__item-promo-text {
-    margin-top: 15px;
-  }
+.features__item-img-wrap {
+  content: "";
+  width: auto;
+  min-height: 260px;
+  margin: 40px -20px 0 -20px;
 
-  &__item-img-wrap {
-    content: "";
-    width: auto;
-    min-height: 280px;
-    margin: 40px -20px 0 -20px;
+  &--city {
+    background: url(../img/photo-city@1x.jpg) no-repeat center;
     background-size: cover;
-
-    &--city {
-      background: url(../img/photo-city@1x.jpg) no-repeat center;
-    }
-    &--bridge {
-      background: url(../img/photo-bridge@1x.jpg) no-repeat center;
-    }
   }
-
-  &__small-items-wrap,
-  &__large-item-wrap,
-  &__medium-items-wrap {
-    @include container;
-  }
-
-  &__item--small {
-    text-align: left;
-    padding: 35px 15px 0 45px;
-
-    & >p {
-      margin-top: 15px;
-    }
-    &-last {
-      margin-bottom: 30px;
-    }
-  }
-
-  &__item--medium {
-    padding: 20px;
-    border-bottom: 1px solid #d6d6d6;
-
-    &-last {
-      border-bottom: none;
-    }
-  }
-
-  &__items-block--grey {
-    background-color: #eeeeee;
+  &--bridge {
+    background: url(../img/photo-bridge@1x.jpg) no-repeat center;
+    background-size: cover;
   }
 }
 
-/* Планшет */
-/* Пытался сделать красиво без флексбоксов, чтобы внутри блока item--large картинка
- всегда была одной высоты с блоком текста, но css таблицы плохо подружились с флоатами и
- попытками задать min-height, пришлось ставить фиксированную.
- Нужен совет, или можно оставить так до внедрения в макет флекса */
+.features__small-items-wrap,
+.features__large-item-wrap,
+.features__medium-items-wrap {
+  @include container;
+  display: flex;
+  flex-direction: column;
+}
 
+.features__small-items-wrap {
+  margin-top: 6px;
+  padding-bottom: 37px;
+}
+
+.features__medium-items-wrap {
+  background-color: #eeeeee;
+}
+
+.features__item--small {
+  text-align: left;
+  padding: 27px 15px 0 48px;
+}
+
+.features__item--small > p {
+  margin-top: 15px;
+}
+
+.features__item--housing {
+  background: url(../img/icon-house.svg) no-repeat left 2px top 22px;
+  background-size: 36px;
+}
+
+.features__item--gift {
+  background: url(../img/icon-gift.svg) no-repeat left 6px top 19px;
+  background-size: 30px 35px;
+}
+
+.features__item--burger {
+  background: url(../img/icon-burger.svg) no-repeat left 0px top 25px;
+  background-size: 38px 33px;
+}
+
+.features__item--medium {
+  padding-top: 25px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #d6d6d6;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+
+/* Планшет */
 @media (min-width: 768px) {
 
   .features {
-    margin-top: 55px;
+    margin-top: 51px;
+  }
 
-    &__item--large {
-      min-height: 256px;
-      padding-top: 0;
+  .features__item--large {
+    min-height: 256px;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .features__item-headline {
+    margin-top: 0;
+  }
+
+  .features__item--first {
+    background: #81b3d2;
+  }
+
+  .features__item-text-wrap {
+    width: 33.3%;
+    padding: 44px;
+
+    &--swap-order {
+      order: 2;
     }
+  }
 
-    &__item-headline {
-      margin-top: 0;
-    }
+  .features__item-promo-text {
+    margin-top: 21px;
+  }
 
-    &__item--first {
-      background: #81b3d2;
-    }
+  .features__item-img-wrap {
+    width: 66.6%;
+    min-height: 256px;
+    margin: 0;
+    background-size: cover;
+  }
 
-    &__item-text-wrap {
-      display: table-cell;
-      vertical-align: middle;
-      width: 33.3%;
-      height: 256px;
-      padding: 42px;
+  .features__small-items-wrap,
+  .features__large-item-wrap,
+  .features__medium-items-wrap {
+    @include clearfix;
+  }
 
-      &--right-float {
-        float: right;
-      }
-    }
+  .features__large-item-wrap {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
 
-    &__item-img-wrap {
-      display: table-cell;
-      vertical-align: middle;
-      width: 66.6%;
-      margin: 0;
-      background-size: cover;
+  .features__small-items-wrap {
+    flex-direction: row;
+    margin-top: 3px;
+    margin-bottom: 7px;
+    padding: 0;
+  }
 
-      &--left-float {
-        float: left;
-      }
-    }
+  .features__item--small {
+    text-align: center;
+    width: 33.33%;
+    padding: 155px 35px 55px 35px;
+  }
 
-    &__small-items-wrap,
-    &__large-item-wrap,
-    &__medium-items-wrap {
-      @include clearfix;
-    }
+  .features__item--small > h2 {
+    font-size: 21px;
+  }
 
-    &__large-item-wrap {
-      display: table;
-      width: 100%;
-      padding: 0;
-    }
+  .features__item--small > p {
+    margin-top: 21px;
+    padding: 0 12px;
+  }
 
-    &__item--small {
-      float: left;
-      text-align: center;
-      width: 33.33%;
-      padding: 155px 35px 55px 35px;
-    }
+  .features__item--swap-order {
+    order: 3;
+  }
 
-    &__item--small > h2 {
-      font-size: 21px;
-    }
+  .features__item--housing {
+    background: url(../img/icon-house.svg) no-repeat center top 55px;
+    background-size: 75px 72px;
+  }
 
-    &__item--small--last {
-      float: none;
-    }
+  .features__item--gift {
+    background: url(../img/icon-gift.svg) no-repeat center top 54px;
+    background-size: 64px 75px;
+  }
 
-    &__medium-items-wrap {
-      padding: 0;
-    }
+  .features__item--burger {
+    background: url(../img/icon-burger.svg) no-repeat center top 59px;
+    background-size: 77px 68px;
+  }
 
-    &__item--medium {
-      float: left;
-      width: 33.33%;
-      padding: 45px;
-      border: none;
-    }
-    &__item--medium > h2 {
-      word-spacing: 200px;
-    }
+  .features__medium-items-wrap {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .features__item--medium {
+    width: 33.33%;
+    padding: 45px;
+    border: none;
+  }
+
+  .features__item--medium > h2 {
+    word-spacing: 200px;
   }
 }
 
+
+/* Десктоп */
+@media (min-width: 1200px) {
+
+  .features__item-text-wrap {
+    width: 33.3%;
+    padding: 50px 55px;
+  }
+
+  .features__item-headline {
+    margin-top: -5px;
+  }
+
+  .features__small-items-wrap {
+    margin-bottom: 29px;
+  }
+
+  .features__medium-items-wrap {
+    padding-bottom: 21px;
+  }
+}

@@ -1,43 +1,68 @@
+@import "../mixins.scss";
+
 .site-intro {
-  text-align: center;
   line-height: 26px;
-
-  &__bg-wrap {
-    content: "";
-    height: 390px;
-    background: url(../img/text-sedona-index.svg) no-repeat center,
-                url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom,
-                url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
-    background-size: 280px auto, 101% 26px, auto;
-  }
-
-  &__headline {
-    margin-top: 40px;
-  }
-
-  &__paragraph {
-    margin-top: 30px;
-  }
 }
+
+.site-intro__bg-wrap {
+  content: "";
+  height: 390px;
+  background: url(../img/text-sedona-index.svg) no-repeat center,
+              url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom,
+              url(../img/bg-back-mobile@1x.jpg) no-repeat center bottom;
+  background-size: 280px auto, 101% 26px, auto;
+}
+
+.site-intro__text-wrap {
+  padding: 0 30px;
+}
+
+.site-intro__headline {
+  margin-top: 40px;
+}
+
+.site-intro__paragraph {
+  margin-top: 26px;
+}
+
 
 /* Планшет */
 @media (min-width: 768px) {
 
-  .site-intro {
+  .site-intro__bg-wrap {
+    height: 518px;
+    background: url(../img/text-sedona-index.svg) no-repeat center top 80px,
+                url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom,
+                url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom,
+                url(../img/back-desktop.jpg) no-repeat center bottom;
+    background-size: 460px auto, 700px 55px, 101% 35px, auto;
+  }
 
-    &__bg-wrap {
-      height: 518px;
-      background: url(../img/text-sedona-index.svg) no-repeat center,
-                  url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom,
-                  url(../img/bg-intro-triangle-mobile.svg) no-repeat center bottom,
-                  url(../img/back-desktop.jpg) no-repeat center bottom;
-      background-size: 450px auto, 700px 40px, 101% 26px, auto;
-    }
+  .site-intro__text-wrap {
+    margin-top: 51px;
+    padding: 0 17%;
+  }
 
-    &__headline {
-      max-width: 630px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .site-intro__paragraph {
+    margin-top: 28px;
+  }
+}
+
+
+/* Десктоп */
+@media (min-width: 1200px) {
+
+  .site-intro__bg-wrap {
+    background-size: 460px auto, 700px 55px, 101% 55px, auto;
+  }
+
+  .site-intro__text-wrap {
+    max-width: 490px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .site-intro__headline {
+    margin-top: 50px;
   }
 }

@@ -1,29 +1,72 @@
+@import "../mixins.scss";
+
 .site-footer {
   text-align: center;
-  padding: 30px 0 20px 0;
-
-  &__social {
-    margin-top: 35px;
-  }
-  &__references {
-    margin-top: 40px;
-    line-height: 26px;
-  }
+  padding: 35px 0 20px 0;
 }
+
+.site-footer__wrap {
+  @include container;
+}
+
+.site-footer__social {
+  margin-top: 38px;
+}
+
+.site-footer__references {
+  margin-top: 42px;
+  line-height: 26px;
+}
+
+.site-footer__references-link {
+  display: inline-block;
+  vertical-align: middle;
+  word-spacing: 10px;
+}
+
 
 /* Планшет */
 @media (min-width: 768px) {
 
   .site-footer {
-    padding: 30px 0;
+    padding: 37px 0;
+    font-size: 0;
+  }
 
-    &__hashtag,
-    &__social,
-    &__references {
-      float: left;
-      width: 33.33%;
-      margin: 0;
-      margin-top: 0;
-    }
+  .site-footer__hashtag,
+  .site-footer__social,
+  .site-footer__references {
+    display: inline-block;
+    width: 33.33%;
+    margin: 0;
+    margin-top: 0;
+  }
+
+  .site-footer__hashtag {
+    text-align: left;
+    font-size: 21px;
+  }
+
+  .site-footer__references {
+    text-align: right;
+    font-size: 14px;
+  }
+}
+
+
+/* Десктоп */
+@media (min-width: 1200px) {
+
+  .site-footer__wrap {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .site-footer__hashtag {
+    text-align: center;
+  }
+
+  .site-footer__references {
+    padding-right: 40px;
   }
 }

@@ -1,51 +1,76 @@
 @import "../mixins.scss";
 
 .promo-video {
-  margin-top: 15px;
-  margin-bottom: 30px;
-
-  &__wrap {
-    padding-top: 30px;
-    border-top: 1px solid #e5e5e5;
-  }
-
-  &__paragraph {
-    margin-top: 30px;
-    line-height: 24px;
-  }
-
-  &__video-wrap {
-    margin-top: 32px;
-  }
-
-  &__preview-img-wrap {
-    width: 100%;
-    height: 202px;
-    background: url(../img/video-mobile@1x.jpg) no-repeat center;
-    background-size: cover;
-  }
+  margin-bottom: 40px;
 }
+
+.promo-video__header {
+  @include container;
+  padding-top: 30px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.promo-video__paragraph {
+  margin-top: 30px;
+  line-height: 24px;
+}
+
+.promo-video__video-wrap {
+  margin-top: 32px;
+}
+
+.promo-video__preview-img-wrap {
+  width: 100%;
+  height: 202px;
+  background: url(../img/video-mobile@1x.jpg) no-repeat center;
+  background-size: cover;
+}
+
 
 /* Планшет */
 @media (min-width: 768px) {
 
   .promo-video {
+    @include container;
+    margin-top: 35px;
+  }
 
-    &__wrap {
-      border-top: none;
-    }
+  .promo-video__video-wrap {
+    margin-top: 73px;
+    border-top: none;
+  }
 
-    &__preview-img-wrap {
-      background: url(../img/video-tablet.jpg) no-repeat center;
-      background-size: cover;
-    }
+  .promo-video__header {
+    border-top: none;
+  }
+
+  .promo-video__headline {
+    font-size: 30px;
+  }
+
+  .promo-video__paragraph {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-video__preview-img-wrap {
+    height: 500px;
+    background: url(../img/video-tablet.jpg) no-repeat center;
+    background-size: cover;
   }
 }
+
 
 /* Десктоп */
 @media (min-width: 1200px) {
 
-
+  .promo-video {
+    margin-top: 40px;
+    margin-bottom: 83px;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
 }
 
 

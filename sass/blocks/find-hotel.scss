@@ -1,40 +1,65 @@
 @import "../mixins.scss";
 
 .find-hotel {
-  padding: 25px 5px 50px 5px;
-
-  &__wrap {
-    @include container;
-  }
-
-  &__headline {
-    font-size: 21px;
-  }
-
-  &__info {
-    margin-top: 20px;
-  }
-
-  &__btn {
-    margin-top: 35px;
-  }
+  padding-top: 30px;
+  padding-bottom: 48px;
 }
+
+.find-hotel br {
+  display: none;
+}
+
+.find-hotel__wrap {
+  @include container;
+}
+
+.find-hotel__headline {
+  font-size: 21px;
+}
+
+.find-hotel__info {
+  margin-top: 20px;
+  line-height: 24px;
+}
+
+.find-hotel__btn {
+  margin-top: 33px;
+}
+
 
 /* Планшет */
 @media (min-width: 768px) {
 
-  .find-hotel {
+  .find-hotel br {
+    display: block;
+  }
 
-    &__wrap {
-      max-width: 700px;
-      margin: 0 auto;
-    }
+  .find-hotel__wrap {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 0;
+  }
 
-    &__headline {
-      margin-top: 30px;
-      font-size: 30px;
-      line-height: 36px;
-    }
+  .find-hotel__headline {
+    margin-top: 19px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .find-hotel__info {
+    margin-top: 25px;
+  }
+
+  .find-hotel__btn {
+    margin-top: 42px;
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1200px) {
+
+  .find-hotel__btn {
+    margin-top: 47px;
   }
 }
 

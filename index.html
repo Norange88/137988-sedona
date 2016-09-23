@@ -13,12 +13,12 @@
         <ul class="main-navigation__list">
           <li class="main-navigation__list-item"><a href="#" class="main-navigation__link">Главная</a></li>
           <li class="main-navigation__list-item"><a href="photo.html" class="main-navigation__link">Фото и видео</a></li>
-          <li class="main-navigation__list-item"><a href="#" class="main-navigation__link">Форма отзыва</a></li>
+          <li class="main-navigation__list-item"><a href="form.html" class="main-navigation__link">Форма отзыва</a></li>
           <li class="main-navigation__list-item"><a href="#" class="main-navigation__link">html academy</a></li>
         </ul>
         <button class="main-navigation__close-btn">Скрыть меню</button>
       </nav>
-      <div class="container">
+      <div class="site-header__mobile-panel">
       	<div class="site-header__logo-wrap"></div>
         <button class="site-header__navigation-open-btn">Открыть меню</button>
       </div>
@@ -28,7 +28,7 @@
     <!-- Site intro -->
     <section class="site-intro">
       <div class="site-intro__bg-wrap"></div>
-      <div class="container">
+      <div class="site-intro__text-wrap">
         <h1 class="site-intro__headline">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="site-intro__paragraph">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>
@@ -38,7 +38,7 @@
       <div class="features__item features__item--first features__item--large">
         <div class="features__large-item-wrap">
           <div class="features__item-text-wrap">
-            <h2 class="features__item-headline">Настоящий городок</h2>
+            <h2 class="features__item-headline">Настоящий<br class="modile-hidden"> городок</h2>
             <p class="features__item-number">— №1 —</p>
             <p class="features__item-promo-text">Седона не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
@@ -46,46 +46,44 @@
         </div>
       </div>
       <div class="features__small-items-wrap">
-        <div class="features__item features__item--small">
+        <div class="features__item features__item--small features__item--housing">
           <h2>Жильё</h2>
           <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </div>
-        <div class="features__item features__item--small">
+        <div class="features__item features__item--small features__item--gift features__item--swap-order">
           <h2>Сувениры</h2>
-          <p>Не только китайского, но и местного производства!</p>
+          <p>Не только китайского,<br class="mobile-hidden"> но и местного производства!</p>
         </div>
-        <div class="features__item features__item--small features__item--small-last">
+        <div class="features__item features__item--small features__item--burger">
           <h2>Еда</h2>
-          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <p>Всегда заказывай фирменный бургер, вы не разочаруетесь!</p>
         </div>
       </div>
       <div class="features__item features__item--large">
         <div class="features__large-item-wrap">
-          <div class="features__item-text-wrap features__item-text-wrap--right-float">
-            <h2 class="features__item-headline">Там есть мост дъявола</h2>
+          <div class="features__item-text-wrap features__item-text-wrap--swap-order">
+            <h2 class="features__item-headline">Там есть<br class="mobile-hidden"> мост дъявола</h2>
             <p class="features__item-number">— №2 —</p>
-            <p class="features__item-promo-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <p class="features__item-promo-text">Да, по нему можно пройти!<br class="mobile-hidden tablet-hidden"> Если конечно вы осмелитесь</p>
           </div>
-          <div class="features__item-img-wrap features__item-img-wrap--left-float features__item-img-wrap--bridge"></div>
+          <div class="features__item-img-wrap features__item-img-wrap--bridge"></div>
         </div>
       </div>
-      <div class="features__items-block features__items-block--grey">
-        <div class="features__medium-items-wrap">
-          <div class="features__item features__item--medium">
-            <h2>Небольшая площадь</h2>
-            <p class="features__item-number">— №3 —</p>
-            <p class="features__item-promo-text">Все достопримечательности находятся очень близко</p>
-          </div>
-          <div class="features__item features__item--medium">
-            <h2>Красивая дорога</h2>
-            <p class="features__item-number">— №4 —</p>
-            <p class="features__item-promo-text">Ехать в седону из лас-вегаса совсем не скучно!</p>
-          </div>
-          <div class="features__item features__item--medium features__item--medium-last">
-            <h2>Мало туристов</h2>
-            <p class="features__item-number">— №5 —</p>
-            <p class="features__item-promo-text">Большинство едет в гранд каньони толпится там</p>
-          </div>
+      <div class="features__medium-items-wrap">
+        <div class="features__item features__item--medium">
+          <h2>Небольшая площадь</h2>
+          <p class="features__item-number">— №3 —</p>
+          <p class="features__item-promo-text">Все достопримеча<br>тельности находятся очень близко</p>
+        </div>
+        <div class="features__item features__item--medium">
+          <h2>Красивая дорога</h2>
+          <p class="features__item-number">— №4 —</p>
+          <p class="features__item-promo-text">Ехать в седону из лас-вегаса совсем не скучно!</p>
+        </div>
+        <div class="features__item features__item--medium">
+          <h2>Мало туристов</h2>
+          <p class="features__item-number">— №5 —</p>
+          <p class="features__item-promo-text">Большинство едет в гранд каньон и толпится там</p>
         </div>
       </div>
     </section>
@@ -93,27 +91,35 @@
     <section class="find-hotel">
       <div class="find-hotel__wrap">
         <h2 class="find-hotel__headline">Заинтересовались?</h2>
-        <p class="find-hotel__info">Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <p class="find-hotel__info">Укажите предполагаемые даты поездки<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a href='#' class="find-hotel__btn btn">Найти гостиницу</a>
       </div>
     </section>
     <!-- Map -->
     <section class="map">
-      <div class="container">
-        <div class="map__wrap"></div>
-      </div>
+      <div class="map__wrap"></div>
     </section>
     </main>
     <!-- Footer -->
     <footer class="site-footer">
-      <div class="container">
+      <div class="site-footer__wrap">
         <p class='site-footer__hashtag hashtag'>#visitSEDONA</p>
         <div class="site-footer__social social">
-          <a href="#" class="social-btn social-btn--tw">Twitter</a>
-          <a href="#" class="social-btn social-btn--fb">Facebook</a>
-          <a href="#" class="social-btn social-btn--yt">Youtube</a>
+          <a href="#" class="social-btn social-btn--tw">
+            <i class="icon icon--tw">Twitter</i>
+          </a>
+          <a href="#" class="social-btn social-btn--fb">
+            <i class="icon icon--fb">Facebook</i>
+          </a>
+          <a href="#" class="social-btn social-btn--yt">
+            <i class="icon icon--yt">Youtube</i>
+          </a>
         </div>
-        <div class="site-footer__references">Разработано<a href='https://htmlacademy.ru' class="icon icon--academy"> HTML Academy</a></div>
+        <div class="site-footer__references">
+        <a href='https://htmlacademy.ru' class="site-footer__references-link">
+          Разработано <i class="icon icon--academy">HTML Academy</i>
+        </a>
+        </div>
       </div>
     </footer>
   </body>
