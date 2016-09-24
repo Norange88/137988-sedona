@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   height: 110px;
-  padding: 0 20px;
+  padding: 0 21px;
   background: rgba(0,0,0, 0.5) url(../img/controls-bg.jpg) no-repeat center bottom;
   background-size: 100% 63px;
 }
@@ -60,13 +60,14 @@
   .video-controls__wrap {
     align-items: center;
     height: 93px;
-    padding: 0 30px;
+    padding: 0 36px;
     background: rgba(0,0,0, 0.5);
   }
 
   .video-controls__rewind {
     width: auto;
     flex-basis: 68%;
+    margin-left: 5px;
   }
 
   .video-controls__cc-btn {
@@ -75,5 +76,13 @@
 
   .video-controls__replay-btn {
     order: -1;
+  }
+}
+
+/* Планшет */
+@media (min-width: 1200px) {
+
+  .video-controls__rewind {
+    flex-basis: 75%;
   }
 }

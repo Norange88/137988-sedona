@@ -1,7 +1,7 @@
 /* Шапка с надписью Sedona для мобильной формы и галереи */
 @mixin sedona-bg-compact {
   padding-top: 160px;
-  background: url(../img/text-sedona.svg) no-repeat center top 50px,
+  background: url(../img/text-sedona.svg) no-repeat center top 52px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 134px,
               url(../img/bg-back-mobile@1x.jpg) no-repeat center top -229px;
   background-size: 230px auto, 101% 26px, auto auto;
@@ -20,7 +20,7 @@
 /* Шапка с надписью Sedona для десктопной формы и галереи */
 @mixin sedona-bg-desktop {
   padding-top: 305px;
-  background: url(../img/text-sedona.svg) no-repeat center top 105px,
+  background: url(../img/text-sedona.svg) no-repeat center top 102px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 243px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 246px,
               url(../img/back-desktop.jpg) no-repeat center top -215px;

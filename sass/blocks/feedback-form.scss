@@ -145,6 +145,13 @@
   background: url(../img/square.png) no-repeat left center;
 }
 
+.feedback-form__additional-info-headline {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 800;
+  color: #000;
+}
+
 .feedback-form__textarea {
   margin-top: 20px;
   padding: 14px 20px;
@@ -243,10 +250,6 @@ label[for="email"] {
 
   .feedback__intro-wrap {
     margin-top: 70px;
-  }
-
-  .tablet-hidden {
-    display: none;
   }
 
   .feedback__headline {
@@ -378,6 +381,7 @@ label[for="email"] {
   .feedback-form__additional-info-headline  {
     width: 400px;
     margin: -14px auto 14px auto;
+    font-size: 21px;
     background-color: #fff;
   }
 
