@@ -1,0 +1,102 @@
+@import "../mixins.scss";
+
+.main-navigation {
+  position: relative;
+  background-color: #81b3d2;
+}
+
+.main-navigation__list {
+  list-style: none;
+}
+
+.main-navigation__list-item {
+  border-bottom: 1px solid #678fa8;
+  border-top: 1px solid #9ac2db;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    box-shadow: inset 0 -1px 4px 0 rgba(0,0,0, 0.2);
+  }
+}
+
+.main-navigation__link {
+  display: block;
+  padding: 8px 0;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.main-navigation__close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  cursor: pointer;
+  background-color: inherit;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 11px;
+    left: 5px;
+    display: block;
+    content: "";
+    width: 25px;
+    height: 4px;
+    background-color: #fff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+/* Планшет */
+@media (min-width: 768px) {
+
+  .main-navigation {
+    @include clearfix;
+    background-color: #fff;
+  }
+
+  .main-navigation__list-item {
+    float: left;
+    width: 20%;
+    border: none;
+
+    &:last-child  {
+      margin-right: 0;
+      box-shadow: none;
+    }
+
+    &:nth-child(2) {
+      margin-right: 20%;
+    }
+  }
+
+  .main-navigation__link {
+    padding: 9px 0;
+    font-size: 14px;
+    color: #000;
+  }
+
+  .main-navigation__close-btn {
+    display: none;
+  }
+}
+

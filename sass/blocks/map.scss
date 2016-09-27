@@ -1,0 +1,32 @@
+
+.map__wrap {
+  height: 350px;
+  background: url(../img/bg-map-mobile@1x.jpg) no-repeat center;
+  background-size: cover;
+}
+
+
+/* Планшет */
+@media (min-width: 768px) {
+
+  .map {
+    margin-top: 9px;
+  }
+
+  .map__wrap {
+    background: url(../img/map-tablet.jpg) no-repeat center;
+  }
+}
+
+
+/* Десктоп */
+@media (min-width: 1200px) {
+
+  .map {
+    margin-top: 15px;
+  }
+
+  .map__wrap {
+    background: url(../img/map-desktop.jpg) no-repeat center;
+  }
+}

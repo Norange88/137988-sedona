@@ -1,0 +1,216 @@
+@import "../mixins.scss";
+
+.gallery {
+  @include sedona-bg-compact;
+}
+
+.gallery__header {
+  @include container;
+  margin-top: 36px;
+}
+
+.gallery__intro {
+  margin-top: 26px;
+  padding: 0 5px;
+  line-height: 24px;
+}
+
+.gallery__content-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+}
+
+.gallery__item {
+  padding-top: 22px;
+  line-height: 24px;
+  font-weight: 800;
+  border-top: 1px solid #e5e5e5;
+}
+
+.gallery__item-wrap {
+  @include container;
+
+  text-align: left;
+}
+
+.gallery__image-wrap {
+  height: 280px;
+
+  &--road {
+    background: url(../img/photo-1-mobile@1x.jpg) no-repeat center;
+    background-size: cover;
+  }
+  &--cactus {
+    background: url(../img/photo-2-mobile@1x.jpg) no-repeat center;
+    background-size: cover;
+  }
+  &--serpentine {
+    background: url(../img/photo-3-mobile@1x.jpg) no-repeat center;
+    background-size: cover;
+  }
+  &--devils-bridge {
+    background: url(../img/photo-4-mobile@1x.jpg) no-repeat center;
+    background-size: cover;
+  }
+}
+
+.gallery__text-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 0px 18px 0;
+}
+
+.gallery__item-author {
+  font-weight: 400;
+  text-transform: none;
+}
+
+.gallery__likes-count {
+  margin-top: 6px;
+}
+
+.gallery__likes-count .icon--like {
+  margin-top: -2px;
+}
+
+.gallery__likes-count > span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+
+/* Планшет */
+@media (min-width: 768px) {
+
+  .gallery {
+    @include sedona-bg-tablet;
+    @include container;
+  }
+
+  .gallery__header {
+    @include clearfix;
+    margin-top: 69px;
+  }
+
+  .gallery__headline {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .gallery__content-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 69px;
+  }
+
+  .gallery__item {
+    float: left;
+    width: 50%;
+    padding: 0;
+    border-top: none;
+
+    &:nth-last-child(2n+1) {
+      background-color: #f2f2f2;
+    }
+    &:nth-last-child(2n) {
+      background-color: #eaeaea;
+    }
+  }
+
+  .gallery__item-wrap {
+    padding: 0;
+  }
+
+  .gallery__text-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px 17px 20px;
+  }
+
+  .gallery__likes-count {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .gallery__likes-count > span {
+    display: inline-block;
+    min-width: 24px;
+    margin-left: 5px;
+  }
+
+  .gallery__item--large {
+    width: 100%;
+    background-color: #f2f2f2;
+  }
+
+  .gallery__item--large .gallery__likes-count {
+    margin-right: 0;
+  }
+
+  .gallery__image-wrap {
+    width: 100%;
+    height: 267px;
+
+    &--large {
+      height: 400px;
+    }
+
+    &--road {
+      background: url(../img/photo-1-tablet.jpg) no-repeat center;
+      background-size: cover;
+    }
+    &--cactus {
+      background: url(../img/photo-2-tablet.jpg) no-repeat center;
+      background-size: cover;
+    }
+    &--serpentine {
+      background: url(../img/photo-3-tablet.jpg) no-repeat center;
+      background-size: cover;
+    }
+    &--devils-bridge {
+      background: url(../img/photo-4-tablet.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+}
+
+
+/* Десктоп */
+@media (min-width: 1200px) {
+
+  .gallery {
+    @include sedona-bg-desktop;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .gallery__header {
+    margin-top: 102px;
+  }
+
+  .gallery__content-wrap {
+    margin-top: 71px;
+  }
+
+  .gallery__item {
+    width: 33.33%;
+  }
+
+  .gallery__item--large {
+    width: 100%;
+  }
+
+  .gallery__item-wrap {
+    position: relative;
+  }
+
+  .gallery__text-wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0,0,0, 0.3);
+  }
+}

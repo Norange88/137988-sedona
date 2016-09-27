@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+  font-family: 'PTSans', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #333333;
+  background-color: #fff;
+}
+
+@media (min-width: 1200px) {
+
+  body {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
