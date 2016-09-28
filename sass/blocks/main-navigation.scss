@@ -31,6 +31,16 @@
   line-height: 38px;
   text-transform: uppercase;
   color: #fff;
+
+  &:hover {
+  	color: #fff;
+  	background-color: #669ec0;
+  }
+
+  &:active {
+  	color: #88b6d1;
+		background-color: #5496bd;
+  }
 }
 
 .main-navigation__close-btn {
@@ -42,7 +52,7 @@
   height: 30px;
   font-size: 0;
   cursor: pointer;
-  background-color: inherit;
+  background-color: transparent;
 
   &::before,
   &::after {
@@ -93,6 +103,28 @@
     padding: 9px 0;
     font-size: 14px;
     color: #000;
+
+    &:hover {
+    	color: #9ac2db;
+    	background-color: inherit;
+    }
+
+    &:active {
+    	color: #c1c1c1;
+    	background-color: inherit;
+    }
+  }
+
+  .main-navigation__link--active {
+  	color: #918279;
+
+  	&:hover {
+    	color: #604e43;
+    }
+
+    &:active {
+    	color: #d6d0cc;
+    }
   }
 
   .main-navigation__close-btn {
