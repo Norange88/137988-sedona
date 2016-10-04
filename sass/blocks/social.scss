@@ -12,15 +12,29 @@
   background-color: #81b3d2;
 
   &--tw {
-    padding-top: 14px;
+    padding-top: 16px;
+    padding-left: 2px;
   }
 
   &--fb {
-    padding-top: 13px;
+    padding-top: 14px;
   }
 
   &--yt {
-    padding-top: 13px;
+    padding-top: 17px;
+    padding-left: 2px;
   }
+}
+
+.social-btn:hover {
+	background-color: #669ec0;
+}
+
+.social-btn:active {
+	box-shadow: #5496bd;
+}
+
+.social-btn:active > svg {
+	fill: #88b6d1;
 }
 

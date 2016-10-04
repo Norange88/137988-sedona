@@ -25,9 +25,6 @@
 .video-controls__replay-btn {
   width: 20px;
   height: 25px;
-  overflow: hidden;
-  text-indent: 800px;
-  background: url(../img/replay.png) no-repeat center;
 }
 
 .video-controls__cc-btn {
@@ -35,17 +32,37 @@
   height: 25px;
   margin-left: auto;
   margin-right: 11%;
-  overflow: hidden;
-  text-indent: 800px;
-  background: url(../img/subtitles.png) no-repeat center;
 }
 
 .video-controls__fullscreen-btn {
   width: 26px;
   height: 25px;
-  overflow: hidden;
-  text-indent: 800px;
-  background: url(../img/fullscreen.png) no-repeat center;
+}
+
+.video-controls__replay-btn,
+.video-controls__cc-btn,
+.video-controls__fullscreen-btn {
+	font-size: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.video-controls__replay-btn > svg ,
+.video-controls__cc-btn > svg,
+.video-controls__fullscreen-btn > svg {
+	fill: #5c6870;
+}
+
+.video-controls__replay-btn:hover > svg ,
+.video-controls__cc-btn:hover > svg,
+.video-controls__fullscreen-btn:hover > svg {
+	fill: #333333; 
+}
+
+.video-controls__replay-btn:active > svg ,
+.video-controls__cc-btn:active > svg,
+.video-controls__fullscreen-btn:active > svg {
+	fill: #c1c1c1; 
 }
 
 
@@ -77,7 +94,26 @@
   .video-controls__replay-btn {
     order: -1;
   }
+
+  .video-controls__replay-btn > svg ,
+	.video-controls__cc-btn > svg,
+	.video-controls__fullscreen-btn > svg {
+		fill: #fff;
+	}
+
+	.video-controls__replay-btn:hover > svg ,
+	.video-controls__cc-btn:hover > svg,
+	.video-controls__fullscreen-btn:hover > svg {
+		fill: #c1c1c1;
+	}
+
+	.video-controls__replay-btn:active > svg ,
+	.video-controls__cc-btn:active > svg,
+	.video-controls__fullscreen-btn:active > svg {
+		fill: #c1c1c1; 
+	}
 }
+
 
 /* Планшет */
 @media (min-width: 1200px) {

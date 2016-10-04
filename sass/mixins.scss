@@ -4,17 +4,34 @@
   background: url(../img/text-sedona.svg) no-repeat center top 52px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 134px,
               url(../img/bg-back-mobile@1x.jpg) no-repeat center top -229px;
-  background-size: 230px auto, 101% 26px, auto auto;
-}
+  background-size: 230px auto, 101% 26px, auto;
 
+  @media  (min-resolution: 144dpi),
+      	  (min-resolution: 1.5dppx) {		
+		background: url(../img/text-sedona.svg) no-repeat center top 52px,
+             	  url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 134px,
+                url(../img/bg-back-mobile@2x.jpg) no-repeat center top -229px;
+  	background-size: 230px auto, 101% 26px, auto;
+  }
+}
+	
 /* Шапка с надписью Sedona для планшетной формы и галереи */
 @mixin sedona-bg-tablet {
   padding-top: 290px;
   background: url(../img/text-sedona.svg) no-repeat center top 95px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 235px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 254px,
-              url(../img/back-desktop.jpg) no-repeat center top -228px;
+              url(../img/bg-back-tablet@1x.jpg) no-repeat center top -228px;
   background-size: 460px auto, 700px 55px, 101% 36px, auto;
+	
+	@media  (min-resolution: 144dpi),
+      	  (min-resolution: 1.5dppx) {
+  	background: url(../img/text-sedona.svg) no-repeat center top 95px,
+             	  url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 235px,
+                url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 254px,
+                url(../img/bg-back-tablet@2x.jpg) no-repeat center top -228px;
+  	background-size: 460px auto, 700px 55px, 101% 36px, auto;
+  }
 }
 
 /* Шапка с надписью Sedona для десктопной формы и галереи */
@@ -23,8 +40,17 @@
   background: url(../img/text-sedona.svg) no-repeat center top 102px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 243px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 246px,
-              url(../img/back-desktop.jpg) no-repeat center top -215px;
+              url(../img/bg-back-desktop@1x.jpg) no-repeat center top -215px;
   background-size: 460px auto, 700px 60px, 101% 57px, auto;
+
+  @media  (min-resolution: 144dpi),
+      	  (min-resolution: 1.5dppx) {
+		background: url(../img/text-sedona.svg) no-repeat center top 102px,
+                url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 243px,
+                url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 246px,
+                url(../img/bg-back-desktop@2x.jpg) no-repeat center top -215px;
+  	background-size: 460px auto, 700px 60px, 101% 57px, auto;
+  }
 }
 
 /* Контейнер */

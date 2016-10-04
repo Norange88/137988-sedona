@@ -36,13 +36,29 @@
   margin: 40px -20px 0 -20px;
 
   &--city {
-    background: url(../img/photo-city@1x.jpg) no-repeat center;
+    background: url(../img/photo-city-mobile@1x.jpg) no-repeat center;
     background-size: cover;
   }
   &--bridge {
-    background: url(../img/photo-bridge@1x.jpg) no-repeat center;
+    background: url(../img/photo-bridge-mobile@1x.jpg) no-repeat center;
     background-size: cover;
   }
+}
+
+@media (max-width: 767px) and (min-resolution: 144dpi),
+       (max-width: 767px) and (min-resolution: 1.5dppx) {
+
+	.features__item-img-wrap {
+
+	  &--city {
+	    background: url(../img/photo-city-mobile@2x.jpg) no-repeat center;
+	    background-size: cover;
+	  }
+	  &--bridge {
+	    background: url(../img/photo-bridge-mobile@2x.jpg) no-repeat center;
+	    background-size: cover;
+	  }
+	}
 }
 
 .features__small-items-wrap,
@@ -118,6 +134,34 @@
     background: #81b3d2;
   }
 
+  .features__item-img-wrap {
+
+  	&--city {
+	    background: url(../img/photo-city-tablet@1x.jpg) no-repeat center;
+	    background-size: cover;
+	  }
+	  &--bridge {
+	    background: url(../img/photo-bridge-tablet@1x.jpg) no-repeat center;
+	    background-size: cover;
+	  }
+  }
+
+  @media (min-resolution: 144dpi),
+       	 (min-resolution: 1.5dppx) {
+
+		.features__item-img-wrap {
+
+	  	&--city {
+		    background: url(../img/photo-city-tablet@2x.jpg) no-repeat center;
+		    background-size: cover;
+		  }
+		  &--bridge {
+		    background: url(../img/photo-bridge-tablet@2x.jpg) no-repeat center;
+		    background-size: cover;
+		  }
+		}  
+  }
+
   .features__item-text-wrap {
     width: 33.3%;
     padding: 44px;
@@ -153,7 +197,7 @@
   .features__small-items-wrap {
     flex-direction: row;
     margin-top: 3px;
-    margin-bottom: 7px;
+    margin-bottom: 5px;
     padding: 0;
   }
 
@@ -210,6 +254,34 @@
 
 /* Десктоп */
 @media (min-width: 1200px) {
+	
+	.features__item-img-wrap {
+
+  	&--city {
+	    background: url(../img/photo-city@1x.jpg) no-repeat center;
+	    background-size: cover;
+	  }
+	  &--bridge {
+	    background: url(../img/photo-bridge@1x.jpg) no-repeat center;
+	    background-size: cover;
+	  }
+	}
+
+	@media (min-resolution: 144dpi),
+       	 (min-resolution: 1.5dppx) {
+
+		.features__item-img-wrap {
+
+	  	&--city {
+		    background: url(../img/photo-city@2x.jpg) no-repeat center;
+		    background-size: cover;
+		  }
+		  &--bridge {
+		    background: url(../img/photo-bridge@2x.jpg) no-repeat center;
+		    background-size: cover;
+		  }
+		}  
+  }  
 
   .features__item-text-wrap {
     width: 33.3%;
@@ -221,7 +293,7 @@
   }
 
   .features__small-items-wrap {
-    margin-bottom: 29px;
+    margin-bottom: 27px;
   }
 
   .features__medium-items-wrap {

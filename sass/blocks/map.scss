@@ -14,7 +14,8 @@
   }
 
   .map__wrap {
-    background: url(../img/map-tablet.jpg) no-repeat center;
+    background: url(../img/bg-map-tablet@1x.jpg) no-repeat center;
+    background-size: cover;
   }
 }
 
@@ -27,6 +28,6 @@
   }
 
   .map__wrap {
-    background: url(../img/map-desktop.jpg) no-repeat center;
+    background: url(../img/bg-map-desktop@1x.jpg) no-repeat center;
   }
 }
