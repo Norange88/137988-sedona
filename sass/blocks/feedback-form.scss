@@ -127,6 +127,7 @@
 }
 
 .feedback-form__impressions-item > label {
+	position: relative;
   height: 100%;
 }
 
@@ -157,6 +158,7 @@
 }
 
 .feedback-form__visited-places-item > label {
+	position: relative;
   height: 56px;
 }
 
@@ -207,23 +209,24 @@ input[name="patronymic"] {
 
 input[type="radio"],
 input[type="checkbox"] {
+	position: absolute;
   display: none;
 }
 
-input[type="radio"]:checked + label .feedback-form__circle-bg--inner {
+input[type="radio"]:checked + svg .feedback-form__circle-bg--inner {
   visibility: visible;
 }
 
-input[type="radio"]:focus + label .feedback-form__circle-bg--outer {
+input[type="radio"]:focus + svg .feedback-form__circle-bg--outer {
 	fill: red;
 }
 
-input[type="radio"]:hover + label .feedback-form__circle-bg--outer,
-input[type="checkbox"]:hover + label .feedback-form__rectangle-bg {
+input[type="radio"]:hover + svg .feedback-form__circle-bg--outer,
+input[type="checkbox"]:hover + svg .feedback-form__rectangle-bg {
 	fill: #e5e5e5;
 }
 
-input[type="checkbox"]:checked + label .feedback-form__tick-bg {
+input[type="checkbox"]:checked + svg .feedback-form__tick-bg {
 	visibility: visible;
 }
 
