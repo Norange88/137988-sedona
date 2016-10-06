@@ -1,16 +1,14 @@
 "use strict";
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks("grunt-browser-sync");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-postcss");
-  grunt.loadNpmTasks("grunt-sass");
+
+  require("load-grunt-tasks")(grunt); 
 
   grunt.initConfig({
     sass: {
       style: {
         files: {
-          "css/style.css": "sass/style.scss"
+          "build/css/style.css": "sass/style.scss"
         }
       }
     },
@@ -25,10 +23,13 @@ module.exports = function(grunt) {
               "last 2 Firefox versions",
               "last 2 Opera versions",
               "last 2 Edge versions"
-            ]})
+            ]}),
+            require("css-mqpacker")({
+            	sort: false
+            })
           ]
         },
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
     },
 
@@ -58,8 +59,79 @@ module.exports = function(grunt) {
           spawn: false
         }
       }
+    },
+
+    copy: {
+    	build: {
+    		files: [{
+    			expand: true,
+    			src: [
+    				"fonts/**/*.{woff,woff2}",
+    				"img/**",
+    				"js/**",
+    				"*.html"
+    			],
+    			dest: "build"
+    		}]
+    	}
+    },
+
+    clean: {
+    	build: ["build"]
+    },
+
+    csso: {
+    	compress: {
+    		files: {
+    			"build/css/style.min.css": ["build/css/style.css"]
+    		}
+    	}
+    },
+
+    imagemin: {
+    	images: {
+    		options: {
+    			optimizationlevel: 3
+    		},
+    		files: [{
+    			expand: true,
+    			src: ["build/img/**/*{.jpg,png,gif}"]
+    		}]
+    	}
+    },
+
+    svgstore: {
+    	options: {
+  			svg: {
+  				style: "display:none"
+  			}
+  		},
+    	symbols: {
+    		files: {
+    			"build/img/symbols.svg": ["img/icons/*svg"]
+    		}
+    	}
+    },
+
+    svgmin: {
+    	symbols: {
+    		files: {
+    			src: ["build/img/icons/*.svg"]
+    		}
+    	}
     }
+
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+  grunt.registerTask("build", [
+  	"clean",
+  	"copy",
+  	"sass",
+  	"postcss",
+  	"csso",
+  	"symbols",
+  	"imagemin"
+  ]);
 };

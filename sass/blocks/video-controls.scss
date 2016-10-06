@@ -117,6 +117,10 @@
 
 /* Планшет */
 @media (min-width: 1200px) {
+	
+	.video-controls {
+    padding: 0;
+  }
 
   .video-controls__rewind {
     flex-basis: 75%;

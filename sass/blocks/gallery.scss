@@ -82,7 +82,7 @@
 .gallery__text-wrap {
   display: flex;
   flex-direction: column;
-  padding: 14px 0px 18px 0;
+  padding: 14px 0px 16px 0;
 }
 
 .gallery__item-author {
@@ -94,8 +94,8 @@
   margin-top: 6px;
 }
 
-.gallery__likes-count .icon--like {
-  margin-top: -2px;
+.gallery__icon-like {
+	fill: #a3a3a3;
 }
 
 .gallery__likes-count > span {
@@ -247,6 +247,10 @@
     width: 33.33%;
   }
 
+  .gallery__item-wrap {
+    padding: 0;
+  }
+
   .gallery__item--large {
     width: 100%;
   }
@@ -263,10 +267,9 @@
     background-color: rgba(0,0,0, 0.3);
   }
 
-  .gallery__likes-count > .icon--like {
-  	background: url(../img/icon-like--white.svg) no-repeat center;
-  	background-size: cover;
-  }
+  .gallery__icon-like {
+		fill: #fff;
+	}
 
   .gallery__image-wrap {
 	  height: 267px;

@@ -105,6 +105,8 @@
 .features__item--medium {
   padding-top: 25px;
   padding-bottom: 27px;
+  padding-left: 15px;
+  padding-right: 15px;
   border-bottom: 1px solid #d6d6d6;
 
   &:last-child {
@@ -176,7 +178,7 @@
   }
 
   .features__item-img-wrap {
-    width: 66.6%;
+    width: 66.7%;
     min-height: 256px;
     margin: 0;
     background-size: cover;
@@ -293,10 +295,16 @@
   }
 
   .features__small-items-wrap {
+  	padding: 0;
     margin-bottom: 27px;
   }
 
   .features__medium-items-wrap {
+  	padding: 0;
     padding-bottom: 21px;
+  }
+
+  .features__large-item-wrap {
+  	padding: 0;
   }
 }
