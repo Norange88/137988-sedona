@@ -2,7 +2,18 @@
 
 .main-navigation {
   position: relative;
+  overflow: hidden;
   background-color: #81b3d2;
+
+  &--closed {
+  	max-height: 0;
+  	transition: max-height 0.7s ease-out;
+  }
+
+  &--opened {
+  	max-height: 500px;
+  	transition: max-height 0.7s ease-in;
+  }
 }
 
 .main-navigation__list {
@@ -35,6 +46,7 @@
   &:hover {
   	color: #fff;
   	background-color: #669ec0;
+  	outline: 1px solid #669ec0;
   }
 
   &:active {
@@ -82,6 +94,10 @@
   .main-navigation {
     @include clearfix;
     background-color: #fff;
+
+    &--closed {
+	  	max-height: 500px;
+	  }
   }
 
   .main-navigation__list-item {
@@ -107,6 +123,7 @@
     &:hover {
     	color: #9ac2db;
     	background-color: inherit;
+    	outline: none;
     }
 
     &:active {

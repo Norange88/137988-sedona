@@ -4,10 +4,6 @@
   @include sedona-bg-compact;
 }
 
-.feedback br {
-  display: none;
-}
-
 .feedback__intro-wrap {
   @include container;
 }
@@ -22,6 +18,7 @@
 }
 
 .feedback-form {
+	position: relative;
   text-align: left;
   margin-top: 18px;
 }
@@ -108,6 +105,25 @@
   &--email::after {
     background-image: url(../img/icon-mail.svg);
   }
+
+  &::before {
+  	position: absolute;
+  	display: block;
+  	bottom: -31px;
+  	left: 20px;
+  	font-size: 14px;
+  	line-height: 26px;
+  	text-transform: none;
+  	color: #ff5c5c;
+  }
+
+  &--phone::before {
+  	content: "Ошибка, перепроверьте номер";
+  }
+
+  &--email::before {
+  	content: "Ошибка, перепроверьте email";
+  }
 }
 
 .feedback-form__fieldset-wrap--impressions {
@@ -167,6 +183,7 @@
 }
 
 .feedback-form__additional-info-headline {
+	display: block;
   font-size: 18px;
   line-height: 26px;
   font-weight: 800;
@@ -193,6 +210,54 @@
   display: none;
 }
 
+.feedback-form__popup-message {
+	position: absolute;
+	z-index: 10;
+	text-align: center;
+	left: 50%;
+	width: 320px;
+	margin-left: -160px;
+	border-top: 1px solid #fafafa;
+	background-color: #fff;
+	box-shadow: 0 7px 15px 0 rgba(0,0,0, 0.15);
+
+	&--failure {
+		visibility: hidden;
+		bottom: 505px;
+	}
+
+	&--success {
+		visibility: hidden;
+		bottom: 135px;
+	}
+}
+
+.feedback-form__message-wrap {
+	padding: 40px 50px 35px 50px;
+}
+
+.feedback-form__message-wrap > p {
+	margin-top: 26px;
+	line-height: 24px;
+}
+
+.feedback-form__message-wrap--failure .btn {
+	width: 180px;
+	margin: 20px auto 0 auto;
+	font-size: 18px;
+} 
+
+.feedback-form__popup-message--success .btn {
+	width: 280px;
+	margin: 0 auto;
+	font-size: 18px;
+} 
+
+.feedback-form__popup-btn-wrap {
+	padding: 17px 20px 20px 20px;
+	background-color: #f2f2f2;
+}
+
 input[name="name"] {
   width: 82%;
 }
@@ -213,17 +278,27 @@ input[type="checkbox"] {
   display: none;
 }
 
+/* Большая вложенность, но не знаю, как тут сократить */
 input[type="radio"]:checked + svg .feedback-form__circle-bg--inner {
   visibility: visible;
-}
-
-input[type="radio"]:focus + svg .feedback-form__circle-bg--outer {
-	fill: red;
 }
 
 input[type="radio"]:hover + svg .feedback-form__circle-bg--outer,
 input[type="checkbox"]:hover + svg .feedback-form__rectangle-bg {
 	fill: #e5e5e5;
+}
+
+input[type="radio"]:active + svg .feedback-form__circle-bg--outer,
+input[type="checkbox"]:active + svg .feedback-form__rectangle-bg {
+	fill: #d5d5d5;
+}
+
+input[type="radio"]:active + svg .feedback-form__circle-bg--inner {
+	fill: #a4a4a4;
+}
+
+input[type="checkbox"]:active + svg .feedback-form__tick-bg {
+	stroke: #a4a4a4;
 }
 
 input[type="checkbox"]:checked + svg .feedback-form__tick-bg {
@@ -251,19 +326,6 @@ label[for="email"] {
   display: block;
   margin-left: 20px;
   margin-bottom: 10px;
-}
-
-::-webkit-input-placeholder {
-  opacity: 1;
-}
-::-moz-placeholder {
-  opacity: 1;
-}
-:-ms-input-placeholder {
-  opacity: 1;
-}
-:-moz-placeholder {
-  opacity: 1;
 }
 
 
@@ -309,6 +371,12 @@ label[for="email"] {
     padding: 0;
     border-top: 1px solid #e5e5e5;
   }
+
+  .feedback-form__input-wrap::before {
+  	top: -35px;
+  	right: 0;
+  	left: auto;
+	}
 
   .feedback-form__user-name {
     order: 2;
@@ -377,8 +445,9 @@ label[for="email"] {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 17px;
+    padding: 0 60px 0 70px;
   }
 
   .feedback-form__visited-places-headline {
@@ -389,17 +458,28 @@ label[for="email"] {
   }
 
   .feedback-form__visited-places-item {
-    flex-basis: 31%;
+    flex-basis: 40%;
     margin-top: 30px;
 
     &:first-child,
-    &:nth-child(2) {
+    &:nth-child(3) {
       margin-top: 24px;
     }
 
-    &:nth-child(2n) {
-      text-align: left;
-      margin-left: 9%;
+    &:nth-child(1) {
+    	order: 1;
+    }
+
+    &:nth-child(2) {
+    	order: 3;
+    }
+
+    &:nth-child(3) {
+    	order: 2;
+    }
+
+    &:nth-child(4) {
+    	order: 4;
     }
   }
 
@@ -440,6 +520,72 @@ label[for="email"] {
     display: block;
     margin-top: 77px;
   }
+
+  .feedback-form__popup-message--failure {
+  	bottom: 175px;
+  	left: 50%;
+  	width: 400px;
+  	margin-left: -200px;
+  }
+
+  .feedback-form__popup-message--success {
+  	bottom: 335px;
+  	width: 644px;
+  	margin-left: -322px;
+  }
+
+  .feedback-form__message-wrap > h2 {
+  	font-size: 30px;
+  	line-height: 36px;
+  }
+
+  .feedback-form__message-wrap--failure {
+  	padding: 50px 50px 45px 50px;
+  }
+
+  .feedback-form__message-wrap--success {
+  	padding: 55px 90px 35px 90px;
+  }
+
+  .feedback-form__message-wrap--success > p {
+  	margin-top: 24px;
+  }
+
+  .feedback-form__message-wrap--failure .btn {
+  	width: 270px;
+  	margin: 33px auto 0 auto;
+  	font-size: 21px;
+  }
+
+  .feedback-form__popup-message--success .btn {
+  	width: 460px;
+  	padding: 15px 0;
+  	font-size: 21px;
+  }
+
+  .feedback-form__popup-btn-wrap {
+  	padding: 44px 0;
+  }
+
+  input[name="name"] {
+	  width: 81%;
+	}
+
+	label[for="name"] {
+	  width: 13%;
+	  margin-right: 6%;
+	}
+
+	input[name="surname"],
+	input[name="patronymic"] {
+	  width: 67%;
+	}
+
+	label[for="surname"],
+	label[for="patronymic"] {
+	  width: 25%;
+	  margin-right: 8%;
+	}
 }
 
 
@@ -449,10 +595,6 @@ label[for="email"] {
   .feedback {
     @include sedona-bg-desktop;
     margin-bottom: 57px;
-  }
-
-  .feedback br {
-    display: block;
   }
 
   .feedback-form {
@@ -490,6 +632,11 @@ label[for="email"] {
 		width: 77%;
 	}
 	
+	.feedback-form__input-wrap::before {
+  	top: -35px;
+  	left: 20px;
+  	right: auto;
+	}
 
   .feedback-form__impressions-headline {
     text-align: center;
@@ -537,17 +684,12 @@ label[for="email"] {
   .feedback-form__items-container {
     justify-content: space-between;
     margin-top: 17px;
+    padding: 0;
   }
 
   .feedback-form__visited-places-item {
     flex-basis: auto;
     margin-top: 24px;
-
-    &:first-child,
-    &:nth-child(2n) {
-      margin-left: 0;
-      margin-right: 0;
-    }
   }
 
   .feedback-form__additional-info {
@@ -556,6 +698,10 @@ label[for="email"] {
 
   .feedback-form__textarea {
     height: 158px;
+  }
+
+  .feedback-form__popup-message--failure {
+  	bottom: 58px;
   }
 }
 
