@@ -65,6 +65,11 @@
   width: 100%;
 }
 
+.feedback-form input[type="tel"],
+.feedback-form input[type="email"] {
+	padding: 0 77px 0 20px;
+}
+
 .feedback-form__user-name-item {
   margin-top: 21px;
   font-size: 0;
@@ -375,6 +380,7 @@ label[for="email"] {
   .feedback-form__input-wrap::before {
   	top: -35px;
   	right: 0;
+  	bottom: auto;
   	left: auto;
 	}
 
@@ -639,6 +645,7 @@ label[for="email"] {
 	.feedback-form__input-wrap::before {
   	top: -35px;
   	left: 20px;
+  	bottom: auto;
   	right: auto;
 	}
 
