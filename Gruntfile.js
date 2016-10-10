@@ -88,6 +88,14 @@ module.exports = function(grunt) {
     	}
     },
 
+    uglify: {
+	    compress: {
+	      files: {
+	        "build/js/main.min.js": ["build/js/main.js"]
+	      }
+	    }
+	  },
+
     imagemin: {
     	images: {
     		options: {
@@ -131,6 +139,7 @@ module.exports = function(grunt) {
   	"sass",
   	"postcss",
   	"csso",
+  	"uglify",
   	"symbols",
   	"imagemin"
   ]);

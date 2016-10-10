@@ -9,15 +9,22 @@
 		navigation.classList.remove("main-navigation--opened");
 		navigation.classList.add("main-navigation--closed");
 		open_btn.style.display = "";
+		open_btn.style.display = "";
 	}
 	function nav_open() {
 		navigation.classList.remove("main-navigation--closed");
 		navigation.classList.add("main-navigation--opened");
 		open_btn.style.display = "none";
+		close_btn.style.display = "";
 	}
 
 	close_btn.addEventListener("click", nav_close);
 	open_btn.addEventListener("click", nav_open);
+
+	// Закрытие меню при загрузке страницы
+	nav_close();
+	// После загрузки и моментального закрытия вешается transition для красоты
+	navigation.style.transition = "max-height 0.6s linear";
 })();
 
 

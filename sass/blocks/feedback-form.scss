@@ -1,7 +1,7 @@
 @import "../mixins.scss";
 
 .feedback {
-  @include sedona-bg-compact;
+  @include sedona-bg-mobile;
 }
 
 .feedback__intro-wrap {
@@ -150,6 +150,7 @@
 .feedback-form__impressions-item > label {
 	position: relative;
   height: 100%;
+  cursor: pointer;
 }
 
 .feedback-form__impressions-item-bg,
@@ -181,6 +182,7 @@
 .feedback-form__visited-places-item > label {
 	position: relative;
   height: 56px;
+  cursor: pointer;
 }
 
 .feedback-form__tick-bg {
@@ -280,7 +282,7 @@ input[name="patronymic"] {
 input[type="radio"],
 input[type="checkbox"] {
 	position: absolute;
-  display: none;
+  visibility: hidden;
 }
 
 /* Большая вложенность, но не знаю, как тут сократить */

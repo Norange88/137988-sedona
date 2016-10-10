@@ -4,15 +4,16 @@
   position: relative;
   overflow: hidden;
   background-color: #81b3d2;
-
+	
+	/* Закрытое мобильное меню */
   &--closed {
   	max-height: 0;
-  	transition: max-height 0.7s ease-out;
   }
-
+	/* Открытое мобильное меню */
+	/* Max-height использован, чтобы можно было добавлять
+		 пункты меню и работал transition (transition добавляется в JS)*/
   &--opened {
   	max-height: 500px;
-  	transition: max-height 0.7s ease-in;
   }
 }
 

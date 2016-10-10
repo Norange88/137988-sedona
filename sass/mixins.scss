@@ -1,17 +1,17 @@
 /* Шапка с надписью Sedona для мобильной формы и галереи */
-@mixin sedona-bg-compact {
+@mixin sedona-bg-mobile {
   padding-top: 160px;
   background: url(../img/text-sedona.svg) no-repeat center top 52px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 134px,
               url(../img/bg-back-mobile@1x.jpg) no-repeat center top -229px;
-  background-size: 230px auto, 101% 26px, auto;
+  background-size: 230px auto, 101% 26px, 100% 389px;
 
-  @media  (min-resolution: 144dpi),
-      	  (min-resolution: 1.5dppx) {		
+  @media  (max-width: 767px) and (min-resolution: 144dpi),
+      	  (max-width: 767px) and (min-resolution: 1.5dppx) {		
 		background: url(../img/text-sedona.svg) no-repeat center top 52px,
              	  url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 134px,
                 url(../img/bg-back-mobile@2x.jpg) no-repeat center top -229px;
-  	background-size: 230px auto, 101% 26px, auto;
+  	background-size: 230px auto, 101% 26px, 100% 389px;
   }
 }
 	
@@ -22,15 +22,15 @@
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 235px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 254px,
               url(../img/bg-back-tablet@1x.jpg) no-repeat center top -228px;
-  background-size: 460px auto, 700px 55px, 101% 36px, auto;
+  background-size: 460px auto, 700px 55px, 101% 36px, 100% 518px;
 	
-	@media  (min-resolution: 144dpi),
-      	  (min-resolution: 1.5dppx) {
+	@media (min-width: 768px) and (max-width: 1199px) and (min-resolution: 144dpi),
+      	 (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1.5dppx) {
   	background: url(../img/text-sedona.svg) no-repeat center top 95px,
              	  url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 235px,
                 url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 254px,
                 url(../img/bg-back-tablet@2x.jpg) no-repeat center top -228px;
-  	background-size: 460px auto, 700px 55px, 101% 36px, auto;
+  	background-size: 460px auto, 700px 55px, 101% 36px, 100% 518px;
   }
 }
 
@@ -41,15 +41,15 @@
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 243px,
               url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 246px,
               url(../img/bg-back-desktop@1x.jpg) no-repeat center top -215px;
-  background-size: 460px auto, 700px 60px, 101% 57px, auto;
+  background-size: 460px auto, 700px 60px, 101% 57px, 100% 518px;
 
-  @media  (min-resolution: 144dpi),
-      	  (min-resolution: 1.5dppx) {
+  @media  (min-width: 1200px) and (min-resolution: 144dpi),
+      	  (min-width: 1200px) and (min-resolution: 1.5dppx) {
 		background: url(../img/text-sedona.svg) no-repeat center top 102px,
                 url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 243px,
                 url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 246px,
                 url(../img/bg-back-desktop@2x.jpg) no-repeat center top -215px;
-  	background-size: 460px auto, 700px 60px, 101% 57px, auto;
+  	background-size: 460px auto, 700px 60px, 101% 57px, 100% 518px;
   }
 }
 
