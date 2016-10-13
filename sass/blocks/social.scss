@@ -1,29 +1,29 @@
 .social {
-  font-size: 21px;
+	font-size: 21px;
 }
 
 .social-btn {
-  display: inline-block;
-  vertical-align: middle;
-  width: 47px;
-  height: 47px;
-  font-size: 0;
-  overflow: hidden;
-  background-color: #81b3d2;
+	display: inline-block;
+	vertical-align: middle;
+	width: 47px;
+	height: 47px;
+	font-size: 0;
+	overflow: hidden;
+	background-color: #81b3d2;
 
-  &--tw {
-    padding-top: 16px;
-    padding-left: 2px;
-  }
+	&--tw {
+		padding-top: 16px;
+		padding-left: 2px;
+	}
 
-  &--fb {
-    padding-top: 14px;
-  }
+	&--fb {
+		padding-top: 14px;
+	}
 
-  &--yt {
-    padding-top: 17px;
-    padding-left: 2px;
-  }
+	&--yt {
+		padding-top: 17px;
+		padding-left: 2px;
+	}
 }
 
 .social-btn:hover {

@@ -1,85 +1,81 @@
 @import "../mixins.scss";
 
 .promo-video {
-  margin-bottom: 40px;
+	margin-bottom: 40px;
 }
 
 .promo-video__header {
-  @include container;
-  padding-top: 31px;
-  border-top: 1px solid #e5e5e5;
+	@include container;
+	padding-top: 31px;
+	border-top: 1px solid #e5e5e5;
 }
 
 .promo-video__paragraph {
-  margin-top: 27px;
-  padding: 0 10px;
-  line-height: 24px;
+	margin-top: 27px;
+	padding: 0 10px;
+	line-height: 24px;
 }
 
 .promo-video__video-wrap {
-  margin-top: 35px;
+	margin-top: 35px;
 }
 
-.promo-video__preview-img-wrap {
-  width: 100%;
-  height: 202px;
-  background: url(../img/video-mobile@1x.jpg) no-repeat center;
-  background-size: cover;
+.promo-video__preview-img-wrap > img {
+	width: 100%;
+	height: 202px;
 }
 
 
 /* Планшет */
 @media (min-width: 768px) {
 
-  .promo-video {
-    @include container;
-    margin-top: 35px;
-  }
+	.promo-video {
+		@include container;
+		margin-top: 35px;
+	}
 
-  .promo-video__paragraph {
-    margin-top: 30px;
-  }
+	.promo-video__paragraph {
+		margin-top: 30px;
+	}
 
-  .promo-video__video-wrap {
-    margin-top: 73px;
-    border-top: none;
-  }
+	.promo-video__video-wrap {
+		margin-top: 73px;
+		border-top: none;
+	}
 
-  .promo-video__header {
-    border-top: none;
-  }
+	.promo-video__header {
+		border-top: none;
+	}
 
-  .promo-video__headline {
-    font-size: 30px;
-  }
+	.promo-video__headline {
+		font-size: 30px;
+	}
 
-  .promo-video__paragraph {
-    max-width: 440px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	.promo-video__paragraph {
+		max-width: 440px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-  .promo-video__preview-img-wrap {
-    height: 500px;
-    background: url(../img/video-tablet.jpg) no-repeat center;
-    background-size: cover;
-  }
+	.promo-video__preview-img-wrap > img {
+		height: 500px;
+	}
 }
 
 
 /* Десктоп */
 @media (min-width: 1200px) {
 
-  body .promo-video {
-    margin-top: 40px;
-    margin-bottom: 85px;
-    padding-left: 200px;
-    padding-right: 200px;
-  }
+	body .promo-video {
+		margin-top: 40px;
+		margin-bottom: 85px;
+		padding-left: 200px;
+		padding-right: 200px;
+	}
 
-  .promo-video__video-wrap {
-    margin-top: 71px;
-  }
+	.promo-video__video-wrap {
+		margin-top: 71px;
+	}
 }
 
 

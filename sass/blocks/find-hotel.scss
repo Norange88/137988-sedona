@@ -1,69 +1,61 @@
 @import "../mixins.scss";
 
 .find-hotel {
-  padding-top: 30px;
-  padding-bottom: 48px;
-}
-
-.find-hotel br {
-  display: none;
+	padding-top: 30px;
+	padding-bottom: 48px;
 }
 
 .find-hotel__wrap {
-  @include container;
+	@include container;
 }
 
 .find-hotel__headline {
-  font-size: 21px;
+	font-size: 21px;
 }
 
 .find-hotel__info {
-  margin-top: 20px;
-  line-height: 24px;
+	margin-top: 20px;
+	line-height: 24px;
 }
 
 .find-hotel__btn {
-  margin-top: 33px;
+	margin-top: 33px;
 }
 
 
 /* Планшет */
 @media (min-width: 768px) {
 
-  .find-hotel br {
-    display: block;
-  }
+	.find-hotel__wrap {
+		max-width: 460px;
+		margin: 0 auto;
+		padding: 0;
+	}
 
-  .find-hotel__wrap {
-    max-width: 460px;
-    margin: 0 auto;
-    padding: 0;
-  }
+	.find-hotel__headline {
+		margin-top: 19px;
+		font-size: 30px;
+		line-height: 36px;
+	}
 
-  .find-hotel__headline {
-    margin-top: 19px;
-    font-size: 30px;
-    line-height: 36px;
-  }
+	.find-hotel__info {
+		margin-top: 25px;
+	}
 
-  .find-hotel__info {
-    margin-top: 25px;
-  }
-
-  .find-hotel__btn {
-    margin-top: 42px;
-  }
+	.find-hotel__btn {
+		margin-top: 42px;
+	}
 }
 
 /* Десктоп */
 @media (min-width: 1200px) {
 
-  .find-hotel__btn {
-    margin-top: 47px;
-  }
+	.find-hotel__btn {
+		margin-top: 47px;
+	}
 
-  .find-hotel__wrap {
-  	padding: 0;
-  }
+	.find-hotel__wrap {
+		padding: 0;
+	}
 }
 

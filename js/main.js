@@ -30,15 +30,13 @@
 
 // Google карта------------------------------------
 function initMap() {
-  var sedona = {lat: 34.868881, lng: -111.762009};
-  var map = new google.maps.Map(document.querySelector(".map__wrap"), {
-    zoom: 10,
-    center: sedona
-  });
-  var marker = new google.maps.Marker({
-    position: sedona,
-    map: map
-  });
+	var sedona = {lat: 34.868881, lng: -111.762009};
+	var map = new google.maps.Map(document.querySelector(".map__wrap"), {
+		zoom: 10,
+		center: sedona
+	});
+	var marker = new google.maps.Marker({
+		position: sedona,
+		map: map
+	});
 }
-    
-

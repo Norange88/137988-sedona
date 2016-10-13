@@ -1,80 +1,86 @@
 /* Шапка с надписью Sedona для мобильной формы и галереи */
 @mixin sedona-bg-mobile {
-  padding-top: 160px;
-  background: url(../img/text-sedona.svg) no-repeat center top 52px,
-              url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 134px,
-              url(../img/bg-back-mobile@1x.jpg) no-repeat center top -229px;
-  background-size: 230px auto, 101% 26px, 100% 389px;
+	padding-top: 160px;
+	background: url(../img/text-sedona.svg) no-repeat center top 52px,
+							url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 135px,
+							url(../img/bg-back-mobile@1x.jpg) no-repeat center top -229px,
+							linear-gradient(to bottom, #82b4cf 0px, #82b4cf 160px, #fff 160px) no-repeat;
+	background-size: 230px auto, 101% 26px, 100% 389px, 100% auto;
 
-  @media  (max-width: 767px) and (min-resolution: 144dpi),
-      	  (max-width: 767px) and (min-resolution: 1.5dppx) {		
+	@media  (max-width: 767px) and (min-resolution: 144dpi),
+					(max-width: 767px) and (min-resolution: 1.5dppx) {
 		background: url(../img/text-sedona.svg) no-repeat center top 52px,
-             	  url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 134px,
-                url(../img/bg-back-mobile@2x.jpg) no-repeat center top -229px;
-  	background-size: 230px auto, 101% 26px, 100% 389px;
-  }
+								url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 135px,
+								url(../img/bg-back-mobile@2x.jpg) no-repeat center top -229px,
+								linear-gradient(to bottom, #82b4cf 0px, #82b4cf 160px, #fff 160px) no-repeat;
+		background-size: 230px auto, 101% 26px, 100% 389px, 100% auto;
+	}
 }
 	
 /* Шапка с надписью Sedona для планшетной формы и галереи */
 @mixin sedona-bg-tablet {
-  padding-top: 290px;
-  background: url(../img/text-sedona.svg) no-repeat center top 95px,
-              url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 235px,
-              url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 254px,
-              url(../img/bg-back-tablet@1x.jpg) no-repeat center top -228px;
-  background-size: 460px auto, 700px 55px, 101% 36px, 100% 518px;
+	padding-top: 290px;
+	background: url(../img/text-sedona.svg) no-repeat center top 95px,
+							url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 235px,
+							url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 256px,
+							url(../img/bg-back-tablet@1x.jpg) no-repeat center top -228px,
+							linear-gradient(to bottom, #82b4cf 0px, #82b4cf 290px, #fff 290px) no-repeat;
+	background-size: 460px auto, 700px 55px, 101% 36px, 100% 518px, 100% auto;
 	
 	@media (min-width: 768px) and (max-width: 1199px) and (min-resolution: 144dpi),
-      	 (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1.5dppx) {
-  	background: url(../img/text-sedona.svg) no-repeat center top 95px,
-             	  url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 235px,
-                url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 254px,
-                url(../img/bg-back-tablet@2x.jpg) no-repeat center top -228px;
-  	background-size: 460px auto, 700px 55px, 101% 36px, 100% 518px;
-  }
+				 (min-width: 768px) and (max-width: 1199px) and (min-resolution: 1.5dppx) {
+		background: url(../img/text-sedona.svg) no-repeat center top 95px,
+								url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 235px,
+								url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 256px,
+								url(../img/bg-back-tablet@2x.jpg) no-repeat center top -228px,
+								linear-gradient(to bottom, #82b4cf 0px, #82b4cf 290px, #fff 290px) no-repeat;
+		background-size: 460px auto, 700px 55px, 101% 36px, 100% 518px, 100% auto;
+	}
 }
 
 /* Шапка с надписью Sedona для десктопной формы и галереи */
 @mixin sedona-bg-desktop {
-  padding-top: 305px;
-  background: url(../img/text-sedona.svg) no-repeat center top 102px,
-              url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 243px,
-              url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 246px,
-              url(../img/bg-back-desktop@1x.jpg) no-repeat center top -215px;
-  background-size: 460px auto, 700px 60px, 101% 57px, 100% 518px;
+	padding-top: 305px;
+	background: url(../img/text-sedona.svg) no-repeat center top 102px,
+							url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 245px,
+							url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 245px,
+							url(../img/bg-back-desktop@1x.jpg) no-repeat center top -213px,
+							linear-gradient(to bottom, #82b4cf 0px, #82b4cf 305px, #fff 305px) no-repeat;
+	background-size: 460px auto, 700px 60px, 101% 60px, 100% 518px, 100% auto;
 
-  @media  (min-width: 1200px) and (min-resolution: 144dpi),
-      	  (min-width: 1200px) and (min-resolution: 1.5dppx) {
+	@media  (min-width: 1200px) and (min-resolution: 144dpi),
+					(min-width: 1200px) and (min-resolution: 1.5dppx) {
 		background: url(../img/text-sedona.svg) no-repeat center top 102px,
-                url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 243px,
-                url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 246px,
-                url(../img/bg-back-desktop@2x.jpg) no-repeat center top -215px;
-  	background-size: 460px auto, 700px 60px, 101% 57px, 100% 518px;
-  }
+								url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 245px,
+								url(../img/bg-intro-triangle-mobile.svg) no-repeat center top 245px,
+								url(../img/bg-back-desktop@2x.jpg) no-repeat center top -213px,
+								linear-gradient(to bottom, #82b4cf 0px, #82b4cf 305px, #fff 305px) no-repeat;
+		background-size: 460px auto, 700px 60px, 101% 60px, 100% 518px, 100% auto;
+	}
 }
 
 /* Контейнер */
 @mixin container {
-  width: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+	width: auto;
+	padding-left: 20px;
+	padding-right: 20px;
 
-  @media (min-width: 768px) {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
+	@media (min-width: 768px) {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
 
-  @media (min-width: 1200px) {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
+	@media (min-width: 1200px) {
+		padding-left: 120px;
+		padding-right: 120px;
+	}
 }
 
 /* Clearfix */
 @mixin clearfix {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }

@@ -1,37 +1,37 @@
 
 .map__wrap {
-  height: 350px;
-  background: url(../img/icon-map-marker.svg) no-repeat center,
-  						url(../img/bg-map-mobile@1x.jpg) no-repeat center;
-  background-size: 28px, cover;
+	height: 350px;
+	background: url(../img/icon-map-marker.svg) no-repeat center,
+							url(../img/bg-map-mobile@1x.jpg) no-repeat center;
+	background-size: 28px, cover;
 }
 
 
 /* Планшет */
 @media (min-width: 768px) {
 
-  .map {
-    margin-top: 9px;
-  }
+	.map {
+		margin-top: 9px;
+	}
 
-  .map__wrap {
-    background: url(../img/icon-map-marker.svg) no-repeat center,
-    						url(../img/bg-map-tablet@1x.jpg) no-repeat center;
-    background-size: 28px, cover;
-  }
+	.map__wrap {
+		background: url(../img/icon-map-marker.svg) no-repeat center,
+								url(../img/bg-map-tablet@1x.jpg) no-repeat center;
+		background-size: 28px, cover;
+	}
 }
 
 
 /* Десктоп */
 @media (min-width: 1200px) {
 
-  .map {
-    margin-top: 15px;
-  }
+	.map {
+		margin-top: 15px;
+	}
 
-  .map__wrap {
-    background: url(../img/icon-map-marker.svg) no-repeat center,
-    						url(../img/bg-map-desktop@1x.jpg) no-repeat center;					
-    background-size: 28px, cover;
-  }
+	.map__wrap {
+		background: url(../img/icon-map-marker.svg) no-repeat center,
+								url(../img/bg-map-desktop@1x.jpg) no-repeat center;					
+		background-size: 28px, cover;
+	}
 }

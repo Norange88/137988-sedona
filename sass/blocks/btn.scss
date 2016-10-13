@@ -1,25 +1,30 @@
 .btn {
-  text-align: center;
-  display: block;
-  width: 100%;
-  padding: 17px 0;
-  font-family: "PTSans", sans-serif;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 800;
-  color: #fff;
-  background-color: #81b3d2;
-  cursor: pointer;
+	text-align: center;
+	display: block;
+	width: 100%;
+	padding: 17px 0;
+	font-family: "PTSans", Arial, sans-serif;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #fff;
+	background-color: #81b3d2;
+	cursor: pointer;
 
-  &:hover {
-  	color: #fff;
-  	background-color: #669ec0;
-  }
+	&:hover {
+		color: #fff;
+		background-color: #669ec0;
+	}
 
-  &:active {
-  	animation-name: blink;
-  	animation-duration: 1s;
-  }
+	&:active {
+		animation-name: blink;
+		animation-duration: 1s;
+	}
+	/* Других disabled элементов в стайлгайде нет */
+	&:disabled {
+		background-color: #e5e5e5;
+		cursor: default;
+	}
 }
 
 @keyframes blink {

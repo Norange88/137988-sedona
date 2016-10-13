@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Sedona</title>
-		<meta name='viewport' content='width=device-width'>
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="css/style.min.css" type="text/css">
 	</head>
 	<body>
@@ -39,7 +39,7 @@
 							<picture class="gallery__image-wrap gallery__image-wrap--large">
 								<source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
 								<source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
-              	<img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x">
+								<img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="photo-1" width="280" height="280">
 							</picture>
 						</a>
 						<div class="gallery__text-wrap">
@@ -62,7 +62,7 @@
 							<picture class="gallery__image-wrap">
 								<source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
 								<source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
-              	<img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x">
+								<img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="photo-2" width="280" height="280">
 							</picture>
 						</a>
 						<div class="gallery__text-wrap">
@@ -85,7 +85,7 @@
 							<picture class="gallery__image-wrap">
 								<source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
 								<source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
-              	<img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x">
+								<img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="photo-3" width="280" height="280">
 							</picture>
 						</a>
 						<div class="gallery__text-wrap">
@@ -108,7 +108,7 @@
 							<picture class="gallery__image-wrap">
 								<source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
 								<source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
-              	<img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x">
+								<img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="photo-4" width="280" height="280">
 							</picture>
 						</a>
 						<div class="gallery__text-wrap">
@@ -134,7 +134,11 @@
 				<p class="promo-video__paragraph">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
 			</header>
 			<div class="promo-video__video-wrap">
-				<div class="promo-video__preview-img-wrap"></div>
+				<picture class="promo-video__preview-img-wrap">
+					<source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+					<source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+					<img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Video prewiev" width="320" height="202">
+				</picture>
 				<div class="video-controls">
 					<form class="video-controls__wrap">
 						<input class="video-controls__rewind" type="range">
@@ -158,7 +162,7 @@
 		<!-- Footer -->
 		<footer class="site-footer">
 			<div class="site-footer__wrap">
-				<p class='site-footer__hashtag hashtag'>#visitSEDONA</p>
+				<p class="site-footer__hashtag hashtag">#visitSEDONA</p>
 				<div class="site-footer__social social">
 					<a href="#" class="social-btn social-btn--tw">
 						<svg width="18" height="15" fill="#fff"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
@@ -171,7 +175,7 @@
 					</a>
 				</div>
 				<div class="site-footer__references">
-				<a href='https://htmlacademy.ru' class="site-footer__references-link">
+				<a href="https://htmlacademy.ru" class="site-footer__references-link">
 					Разработано
 					<svg class="logo-academy" width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
 				</a>

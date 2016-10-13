@@ -1,40 +1,40 @@
 @import "../mixins.scss";
 
 .feedback {
-  @include sedona-bg-mobile;
+	@include sedona-bg-mobile;
 }
 
 .feedback__intro-wrap {
-  @include container;
+	@include container;
 }
 
 .feedback__headline {
-  margin-top: 35px;
+	margin-top: 35px;
 }
 
 .feedback__intro {
-  margin-top: 27px;
-  line-height: 24px;
+	margin-top: 27px;
+	line-height: 24px;
 }
 
 .feedback-form {
 	position: relative;
-  text-align: left;
-  margin-top: 18px;
+	text-align: left;
+	margin-top: 18px;
 }
 
 .feedback-form fieldset {
-  border-top: 1px solid #e5e5e5;;
+	border-top: 1px solid #e5e5e5;;
 }
 
 .feedback-form__fieldset-wrap {
-  @include container;
-  margin-top: 17px;
-  padding-bottom: 27px;
+	@include container;
+	margin-top: 17px;
+	padding-bottom: 27px;
 }
 
 .feedback-form__fieldset-headline {
-  text-align: center;
+	text-align: center;
 }
 
 .feedback-form input[type="text"],
@@ -42,28 +42,32 @@
 .feedback-form input[type="email"],
 .feedback-form__textarea {
 	height: 57px;
-  padding: 0 20px;
-  font-size: 18px;
-  line-height: 57px;
-  font-weight: 800;
-  color: #000;
-  text-transform: none;
-  background-color: #f2f2f2;
+	padding: 0 20px;
+	font-size: 18px;
+	line-height: 57px;
+	font-weight: 700;
+	color: #000;
+	text-transform: none;
+	background-color: #f2f2f2;
 
-  &:hover {
-  	background-color: #e5e5e5;
-  }
+	&:hover {
+		background-color: #e5e5e5;
+	}
 
-  &:focus {
-  	background-color: #fff;
-  	box-shadow: inset 0 0 0 4px #e5e5e5;
-  }
+	&:focus {
+		background-color: #fff;
+		box-shadow: inset 0 0 0 4px #e5e5e5;
+	}
+}
+
+.feedback-form__textarea {
+	height: auto;
 }
 
 .feedback-form input[type="tel"],
 .feedback-form input[type="email"],
 .feedback-form__textarea {
-  width: 100%;
+	width: 100%;
 }
 
 .feedback-form input[type="tel"],
@@ -71,87 +75,117 @@
 	padding: 0 77px 0 20px;
 }
 
+.feedback-form input::-webkit-input-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+.feedback-form textarea::-webkit-input-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+.feedback-form input::-moz-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+.feedback-form textarea::-moz-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+.feedback-form input:-ms-input-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+.feedback-form textarea:-ms-input-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
 .feedback-form__user-name-item {
-  margin-top: 21px;
-  font-size: 0;
+	margin-top: 21px;
+	font-size: 0;
 }
 
 .feedback-form__fieldset-wrap--contacts {
-  padding-bottom: 29px;
+	padding-bottom: 29px;
 }
 
 .feedback-form__user-contacts-phone {
-  margin-top: 23px;
+	margin-top: 23px;
 }
 
 .feedback-form__user-contacts-email {
-  margin-top: 45px;
+	margin-top: 45px;
 }
 
 .feedback-form__input-wrap {
-  position: relative;
+	position: relative;
 
-  &::after {
-    position: absolute;
-    display: block;
-    content: "";
-    top: 0;
-    right: 0;
-    width: 57px;
-    height: 57px;
-    background-color: #e6e6e6;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+	&::after {
+		position: absolute;
+		display: block;
+		content: "";
+		top: 0;
+		right: 0;
+		width: 57px;
+		height: 57px;
+		background-color: #e6e6e6;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
 
-  &--phone::after {
-    background-image: url(../img/icon-phone.svg);
-  }
+	&--phone::after {
+		background-image: url(../img/icon-phone.svg);
+	}
 
-  &--email::after {
-    background-image: url(../img/icon-mail.svg);
-  }
+	&--email::after {
+		background-image: url(../img/icon-mail.svg);
+	}
 
-  &::before {
-  	position: absolute;
-  	display: block;
-  	bottom: -31px;
-  	left: 20px;
-  	font-size: 14px;
-  	line-height: 26px;
-  	text-transform: none;
-  	color: #ff5c5c;
-  }
+	&::before {
+		position: absolute;
+		display: block;
+		bottom: -31px;
+		left: 20px;
+		font-size: 14px;
+		line-height: 26px;
+		text-transform: none;
+		color: #ff5c5c;
+	}
 
-  &--phone::before {
-  	content: "Ошибка, перепроверьте номер";
-  }
+	&--phone::before {
+		content: "Ошибка, перепроверьте номер";
+	}
 
-  &--email::before {
-  	content: "Ошибка, перепроверьте email";
-  }
+	&--email::before {
+		content: "Ошибка, перепроверьте email";
+	}
 }
 
 .feedback-form__fieldset-wrap--impressions {
-  padding-bottom: 27px;
+	padding-bottom: 27px;
 }
 
 .feedback-form__impressions-item {
-  height: 56px;
-  margin-top: 13px;
-  font-size: 18px;
-  font-weight: 800;
-  text-transform: none;
+	height: 56px;
+	margin-top: 13px;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: none;
 
-  &:first-of-type {
-    margin-top: 24px;
-  }
+	&:first-of-type {
+		margin-top: 24px;
+	}
 }
 
 .feedback-form__impressions-item > label {
 	position: relative;
-  height: 100%;
-  cursor: pointer;
+	height: 100%;
+	cursor: pointer;
 }
 
 .feedback-form__impressions-item-bg,
@@ -169,21 +203,21 @@
 
 
 .feedback-form__visited-places-item {
-  margin-top: 21px;
-  font-size: 18px;
-  line-height: 56px;
-  font-weight: 800;
-  text-transform: none;
+	margin-top: 21px;
+	font-size: 18px;
+	line-height: 56px;
+	font-weight: 700;
+	text-transform: none;
 
-  &:first-of-type {
-    margin-top: 16px;
-  }
+	&:first-of-type {
+		margin-top: 16px;
+	}
 }
 
 .feedback-form__visited-places-item > label {
 	position: relative;
-  height: 56px;
-  cursor: pointer;
+	height: 56px;
+	cursor: pointer;
 }
 
 .feedback-form__tick-bg {
@@ -192,30 +226,30 @@
 
 .feedback-form__additional-info-headline {
 	display: block;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 800;
-  color: #000;
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000;
 }
 
 .feedback-form__textarea {
-  margin-top: 20px;
-  padding: 14px 20px;
-  resize: none;
-  line-height: 26px;
+	margin-top: 20px;
+	padding: 14px 20px;
+	resize: none;
+	line-height: 26px;
 }
 
 .feedback-form__fieldset-wrap--info {
-  padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 
 .feedback-form__submit-btn {
-  margin-top: 50px;
-  padding: 15px 0;
+	margin-top: 50px;
+	padding: 15px 0;
 }
 
 .feedback-form__required-fields-tip {
-  display: none;
+	display: none;
 }
 
 .feedback-form__popup-message {
@@ -250,12 +284,14 @@
 }
 
 .feedback-form__message-wrap--failure .btn {
+	display: block;
 	width: 180px;
 	margin: 20px auto 0 auto;
 	font-size: 18px;
-} 
+}
 
 .feedback-form__popup-message--success .btn {
+	display: block;
 	width: 280px;
 	margin: 0 auto;
 	font-size: 18px;
@@ -267,28 +303,28 @@
 }
 
 input[name="name"] {
-  width: 82%;
+	width: 82%;
 }
 
 label[for="name"] {
-  width: 13%;
-  margin-right: 5%;
+	width: 13%;
+	margin-right: 5%;
 }
 
 input[name="surname"],
 input[name="patronymic"] {
-  width: 69.5%;
+	width: 69.5%;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
 	position: absolute;
-  visibility: hidden;
+	visibility: hidden;
 }
 
 /* Большая вложенность, но не знаю, как тут сократить */
 input[type="radio"]:checked + svg .feedback-form__circle-bg--inner {
-  visibility: visible;
+	visibility: visible;
 }
 
 input[type="radio"]:hover + svg .feedback-form__circle-bg--outer,
@@ -315,8 +351,8 @@ input[type="checkbox"]:checked + svg .feedback-form__tick-bg {
 
 label[for="surname"],
 label[for="patronymic"] {
-  width: 25%;
-  margin-right: 5.5%;
+	width: 25%;
+	margin-right: 5.5%;
 }
 
 input[name="name"],
@@ -325,275 +361,276 @@ input[name="patronymic"],
 label[for="name"],
 label[for="surname"],
 label[for="patronymic"] {
-  display: inline-block;
-  font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
 }
 
 label[for="phone"],
 label[for="email"] {
-  display: block;
-  margin-left: 20px;
-  margin-bottom: 10px;
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 10px;
 }
 
 
 /* Планшет */
 @media (min-width: 768px) {
 
-  .feedback {
-    @include sedona-bg-tablet;
-    margin-bottom: 50px;
-  }
-
-  .feedback-form {
-    margin-top: 56px;
-  }
-
-  .feedback__intro-wrap {
-    margin-top: 70px;
-  }
-
-  .feedback__headline {
-    font-size: 30px;
-    line-height: 36px;
-  }
-
-  .feedback__intro {
-    max-width: 70%;
-    margin: 26px auto 0 auto;
-  }
-
-  .feedback-form {
-    @include container;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .feedback-form fieldset {
-    border-top: none;
-  }
-
-  .feedback-form__fieldset-wrap {
-    @include clearfix;
-    padding: 0;
-    border-top: 1px solid #e5e5e5;
-  }
-
-  .feedback-form__input-wrap::before {
-  	top: -35px;
-  	right: 0;
-  	bottom: auto;
-  	left: auto;
+	.feedback {
+		@include sedona-bg-tablet;
+		margin-bottom: 50px;
 	}
 
-  .feedback-form__user-name {
-    order: 2;
-    width: 50%;
-  }
+	.feedback-form {
+		margin-top: 56px;
+	}
 
-  .feedback-form__user-name-item:first-of-type {
-    margin-top: 57px;
-  }
+	.feedback__intro-wrap {
+		margin-top: 70px;
+	}
 
-  .feedback-form__fieldset-wrap--name {
-    padding-left: 17%;
-    border-top: none;
-    border-left: 1px solid #e5e5e5;
-  }
+	.feedback__headline {
+		font-size: 30px;
+		line-height: 36px;
+	}
 
-  .feedback-form__user-contacts {
-    order: 3;
-    width: 100%;
-    margin-top: 66px;
-  }
+	.feedback__intro {
+		max-width: 70%;
+		margin: 26px auto 0 auto;
+	}
 
-  .feedback-form__user-contacts-headline {
-    width: 400px;
-    margin: -14px auto 0 auto;
-    background-color: #fff;
-  }
+	.feedback-form {
+		@include container;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 
-  .feedback-form__user-contacts-phone {
-    margin-top: 28px;
-  }
+	.feedback-form fieldset {
+		border-top: none;
+	}
 
-  .feedback-form__user-contacts-email {
-    margin-top: 26px;
-  }
+	.feedback-form__fieldset-wrap {
+		@include clearfix;
+		padding: 0;
+		border-top: 1px solid #e5e5e5;
+	}
 
-  .feedback-form__impressions {
-    order: 1;
-    width: 50%;
-  }
+	.feedback-form__input-wrap::before {
+		top: -35px;
+		right: 0;
+		bottom: auto;
+		left: auto;
+	}
 
-  .feedback-form__impressions-item {
-    margin-top: 22px;
-  }
+	.feedback-form__user-name {
+		order: 2;
+		width: 50%;
+	}
 
-  .feedback-form__impressions-item:first-of-type {
-    margin-top: 58px;
-  }
+	.feedback-form__user-name-item:first-of-type {
+		margin-top: 57px;
+	}
 
-  .feedback-form__impressions-headline,
-  .feedback-form__user-name-headline {
-    text-align: left;
-  }
+	.feedback-form__fieldset-wrap--name {
+		padding-left: 17%;
+		border-top: none;
+		border-left: 1px solid #e5e5e5;
+	}
 
-  .feedback-form__fieldset-wrap--impressions {
-    border-top: none;
-  }
+	.feedback-form__user-contacts {
+		order: 3;
+		width: 100%;
+		margin-top: 66px;
+	}
 
-  .feedback-form__visited-places {
-    order: 4;
-    width: 100%;
-    margin-top: 62px;
-  }
+	.feedback-form__user-contacts-headline {
+		width: 400px;
+		margin: -14px auto 0 auto;
+		background-color: #fff;
+	}
 
-  .feedback-form__items-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 17px;
-    padding: 0 60px 0 70px;
-  }
+	.feedback-form__user-contacts-phone {
+		margin-top: 28px;
+	}
 
-  .feedback-form__visited-places-headline {
-    display: block;
-    width: 400px;
-    margin: -28px auto 0 auto;
-    background-color: #fff;
-  }
+	.feedback-form__user-contacts-email {
+		margin-top: 26px;
+	}
 
-  .feedback-form__visited-places-item {
-    flex-basis: 40%;
-    margin-top: 30px;
+	.feedback-form__impressions {
+		order: 1;
+		width: 50%;
+	}
 
-    &:first-child,
-    &:nth-child(3) {
-      margin-top: 24px;
-    }
+	.feedback-form__impressions-item {
+		margin-top: 22px;
+	}
 
-    &:nth-child(1) {
-    	order: 1;
-    }
+	.feedback-form__impressions-item:first-of-type {
+		margin-top: 58px;
+	}
 
-    &:nth-child(2) {
-    	order: 3;
-    }
+	.feedback-form__impressions-headline,
+	.feedback-form__user-name-headline {
+		text-align: left;
+	}
 
-    &:nth-child(3) {
-    	order: 2;
-    }
+	.feedback-form__fieldset-wrap--impressions {
+		border-top: none;
+	}
 
-    &:nth-child(4) {
-    	order: 4;
-    }
-  }
+	.feedback-form__visited-places {
+		order: 4;
+		width: 100%;
+		margin-top: 62px;
+	}
 
-  .feedback-form__impressions-item-bg {
-  	margin-right: 14px;
-  }
+	.feedback-form__items-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-top: 17px;
+		padding: 0 60px 0 70px;
+	}
 
-  .feedback-form__visited-places-item-bg {
-  	margin-right: 19px;
-  }
+	.feedback-form__visited-places-headline {
+		display: block;
+		width: 400px;
+		margin: -28px auto 0 auto;
+		background-color: #fff;
+	}
 
-  .feedback-form__additional-info {
-    order: 5;
-    width: 100%;
-    margin-top: 62px;
-  }
+	.feedback-form__visited-places-item {
+		flex-basis: 40%;
+		margin-top: 30px;
 
-  .feedback-form__additional-info-headline  {
-  	display: block;
-    width: 400px;
-    margin: -14px auto 14px auto;
-    font-size: 21px;
-    background-color: #fff;
-  }
+		&:first-child,
+		&:nth-child(3) {
+			margin-top: 24px;
+		}
 
-  .feedback-form__textarea {
-    margin-top: 47px;
-  }
+		&:nth-child(1) {
+			order: 1;
+		}
 
-  .feedback-form__submit-btn {
-    float: left;
-    width: 50%;
-    margin-top: 57px;
-  }
+		&:nth-child(2) {
+			order: 3;
+		}
 
-  .feedback-form__required-fields-tip {
-    float: right;
-    display: block;
-    margin-top: 77px;
-  }
+		&:nth-child(3) {
+			order: 2;
+		}
 
-  .feedback-form__popup-message--failure {
-  	bottom: 175px;
-  	left: 50%;
-  	width: 400px;
-  	margin-left: -200px;
-  }
+		&:nth-child(4) {
+			order: 4;
+		}
+	}
 
-  .feedback-form__popup-message--success {
-  	bottom: 335px;
-  	width: 644px;
-  	margin-left: -322px;
-  }
+	.feedback-form__impressions-item-bg {
+		margin-right: 14px;
+	}
 
-  .feedback-form__message-wrap > h2 {
-  	font-size: 30px;
-  	line-height: 36px;
-  }
+	.feedback-form__visited-places-item-bg {
+		margin-right: 19px;
+	}
 
-  .feedback-form__message-wrap--failure {
-  	padding: 50px 50px 45px 50px;
-  }
+	.feedback-form__additional-info {
+		order: 5;
+		width: 100%;
+		margin-top: 62px;
+	}
 
-  .feedback-form__message-wrap--success {
-  	padding: 55px 90px 35px 90px;
-  }
+	.feedback-form__additional-info-headline  {
+		display: block;
+		width: 400px;
+		margin: -14px auto 14px auto;
+		font-size: 21px;
+		background-color: #fff;
+	}
 
-  .feedback-form__message-wrap--success > p {
-  	margin-top: 24px;
-  }
+	.feedback-form__textarea {
+		margin-top: 47px;
+	}
 
-  .feedback-form__message-wrap--failure .btn {
-  	width: 270px;
-  	margin: 33px auto 0 auto;
-  	font-size: 21px;
-  }
+	.feedback-form__submit-btn {
+		float: left;
+		width: 50%;
+		margin-top: 57px;
+	}
 
-  .feedback-form__popup-message--success .btn {
-  	width: 460px;
-  	padding: 15px 0;
-  	font-size: 21px;
-  }
+	.feedback-form__required-fields-tip {
+		float: right;
+		display: block;
+		margin-top: 77px;
+	}
 
-  .feedback-form__popup-btn-wrap {
-  	padding: 44px 0;
-  }
+	.feedback-form__popup-message--failure {
+		bottom: 175px;
+		left: 50%;
+		width: 400px;
+		margin-left: -200px;
+	}
 
-  input[name="name"] {
-	  width: 81%;
+	.feedback-form__popup-message--success {
+		bottom: 335px;
+		width: 644px;
+		margin-left: -322px;
+	}
+
+	.feedback-form__message-wrap > h2 {
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	.feedback-form__message-wrap--failure {
+		padding: 50px 50px 45px 50px;
+	}
+
+	.feedback-form__message-wrap--success {
+		padding: 55px 90px 35px 90px;
+	}
+
+	.feedback-form__message-wrap--success > p {
+		margin-top: 24px;
+	}
+
+	.feedback-form__message-wrap--failure .btn {
+		width: 270px;
+		margin: 33px auto 0 auto;
+		font-size: 21px;
+	}
+
+	.feedback-form__popup-message--success .btn {
+		width: 460px;
+		padding: 15px 0;
+		font-size: 21px;
+	}
+
+	.feedback-form__popup-btn-wrap {
+		padding: 44px 0;
+	}
+
+	input[name="name"] {
+		width: 81%;
 	}
 
 	label[for="name"] {
-	  width: 13%;
-	  margin-right: 6%;
+		width: 13%;
+		margin-right: 6%;
 	}
 
 	input[name="surname"],
 	input[name="patronymic"] {
-	  width: 67%;
+		width: 67%;
 	}
 
 	label[for="surname"],
 	label[for="patronymic"] {
-	  width: 25%;
-	  margin-right: 8%;
+		width: 25%;
+		margin-right: 8%;
 	}
 }
 
@@ -601,33 +638,33 @@ label[for="email"] {
 /* Десктоп */
 @media (min-width: 1200px) {
 
-  .feedback {
-    @include sedona-bg-desktop;
-    margin-bottom: 57px;
-  }
+	.feedback {
+		@include sedona-bg-desktop;
+		margin-bottom: 57px;
+	}
 
-  .feedback-form {
-    margin-top: 41px;
-  }
+	.feedback-form {
+		margin-top: 41px;
+	}
 
-  .feedback__intro-wrap {
-    margin-top: 104px;
-  }
+	.feedback__intro-wrap {
+		margin-top: 104px;
+	}
 
-  .feedback__intro {
-  	margin-top: 23px;
-  }
+	.feedback__intro {
+		margin-top: 23px;
+	}
 	
 	.feedback-form__fieldset-wrap {
 		padding: 0;
 	}
 
-  .feedback-form__fieldset-wrap--name {
-  	padding-left: 16%;
-  }
+	.feedback-form__fieldset-wrap--name {
+		padding-left: 16%;
+	}
 
 	label[for="name"] {
-	  margin-right: 0;
+		margin-right: 0;
 	}
 
 	input[name="name"] {
@@ -636,8 +673,8 @@ label[for="email"] {
 
 	label[for="surname"],
 	label[for="patronymic"] {
-	  width: 23%;
-	  margin-right: 0;
+		width: 23%;
+		margin-right: 0;
 	}
 	
 	input[name="surname"],
@@ -646,77 +683,77 @@ label[for="email"] {
 	}
 	
 	.feedback-form__input-wrap::before {
-  	top: -35px;
-  	left: 20px;
-  	bottom: auto;
-  	right: auto;
+		top: -35px;
+		left: 20px;
+		bottom: auto;
+		right: auto;
 	}
 
-  .feedback-form__impressions-headline {
-    text-align: center;
-    margin-right: 45px;
-  }
+	.feedback-form__impressions-headline {
+		text-align: center;
+		margin-right: 45px;
+	}
 
-  .feedback-form__impressions-item {
-  	margin-left: 5px;
+	.feedback-form__impressions-item {
+		margin-left: 5px;
 
-  	&:first-of-type {
-  		margin-top: 60px;
-  	}
-  }
+		&:first-of-type {
+			margin-top: 60px;
+		}
+	}
 
-  .feedback-form__user-contacts {
-    margin-top: 64px;
-    padding-bottom: 30px;
-  }
+	.feedback-form__user-contacts {
+		margin-top: 64px;
+		padding-bottom: 30px;
+	}
 
-  .feedback-form__user-contacts-item {
-    float: left;
-    display: flex;
-    align-items: center;
-    width: 50%;
-    margin-top: 75px;
-  }
+	.feedback-form__user-contacts-item {
+		float: left;
+		display: flex;
+		align-items: center;
+		width: 50%;
+		margin-top: 75px;
+	}
 
-  .feedback-form__user-contacts-item > label {
-    margin: 0 21px 0 0;
-  }
+	.feedback-form__user-contacts-item > label {
+		margin: 0 21px 0 0;
+	}
 
-  .feedback-form__user-contacts-phone {
-    padding-right: 8.5%;
-  }
+	.feedback-form__user-contacts-phone {
+		padding-right: 8.5%;
+	}
 
-  .feedback-form__input-wrap--phone,
-  .feedback-form__input-wrap--email {
-    flex-grow: 1;
-  }
+	.feedback-form__input-wrap--phone,
+	.feedback-form__input-wrap--email {
+		flex-grow: 1;
+	}
 
-  .feedback-form__visited-places {
-    margin-top: 33px;
-  }
+	.feedback-form__visited-places {
+		margin-top: 33px;
+	}
 
-  .feedback-form__items-container {
-    justify-content: space-between;
-    margin-top: 17px;
-    padding: 0;
-  }
+	.feedback-form__items-container {
+		justify-content: space-between;
+		margin-top: 17px;
+		padding: 0;
+	}
 
-  .feedback-form__visited-places-item {
-    flex-basis: auto;
-    margin-top: 24px;
-  }
+	.feedback-form__visited-places-item {
+		flex-basis: auto;
+		margin-top: 24px;
+	}
 
-  .feedback-form__additional-info {
-  	margin-top: 60px;
-  }
+	.feedback-form__additional-info {
+		margin-top: 60px;
+	}
 
-  .feedback-form__textarea {
-    height: 158px;
-  }
+	.feedback-form__textarea {
+		height: 158px;
+	}
 
-  .feedback-form__popup-message--failure {
-  	bottom: 58px;
-  }
+	.feedback-form__popup-message--failure {
+		bottom: 58px;
+	}
 }
 
 

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Sedona</title>
-		<meta name='viewport' content='width=device-width'>
+		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="css/style.min.css" type="text/css">
 	</head>
 	<body>
@@ -29,50 +29,50 @@
 		<!-- Feedback form -->
 		<section class="feedback">
 			<div class="feedback__intro-wrap">
-				<h1 class='feedback__headline'>Оставьте свой отзыв</h1>
-				<p class='feedback__intro'>Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br class="mobile-hidden"> а также о посещенных вами достопримечательностях</p>
+				<h1 class="feedback__headline">Оставьте свой отзыв</h1>
+				<p class="feedback__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br class="mobile-hidden"> а также о посещенных вами достопримечательностях</p>
 			</div>
-			<form action="" class="feedback-form">
-				<fieldset class='feedback-form__user-name'>
+			<form action="handler.php" class="feedback-form">
+				<fieldset class="feedback-form__user-name">
 					<div class="feedback-form__fieldset-wrap feedback-form__fieldset-wrap--name">
-						<h2 class='feedback-form__user-name-headline feedback-form__fieldset-headline'>Представьтесь<span class="tablet-hidden">, пожалуйста</span>:</h2>
+						<h2 class="feedback-form__user-name-headline feedback-form__fieldset-headline">Представьтесь<span class="tablet-hidden">, пожалуйста</span>:</h2>
 						<div class="feedback-form__user-name-item">
-							<label for='name'>Имя:</label>
-							<input type="text" id='name' name='name' placeholder='Петр'>
+							<label for="name">Имя:</label>
+							<input type="text" id="name" name="name" placeholder="Петр">
 						</div>
 						<div class="feedback-form__user-name-item">
-							<label for='surname'>Фамилия:</label>
-							<input type="text" id='surname' name='surname' placeholder='Иванов'>
+							<label for="surname">Фамилия:</label>
+							<input type="text" id="surname" name="surname" placeholder="Иванов">
 						</div>
 						<div class="feedback-form__user-name-item">
-							<label for='patronymic'>Отчество:</label>
-							<input type="text" id='patronymic' name='patronymic' placeholder='Александрович'>
+							<label for="patronymic">Отчество:</label>
+							<input type="text" id="patronymic" name="patronymic" placeholder="Александрович">
 						</div>
 					</div>
 				</fieldset>
-				<fieldset class='feedback-form__user-contacts'>
+				<fieldset class="feedback-form__user-contacts">
 					<div class="feedback-form__fieldset-wrap feedback-form__fieldset-wrap--contacts">
-						<h2 class='feedback-form__user-contacts-headline feedback-form__fieldset-headline'>Контактная информация</h2>
+						<h2 class="feedback-form__user-contacts-headline feedback-form__fieldset-headline">Контактная информация</h2>
 						<div class="feedback-form__user-contacts-item feedback-form__user-contacts-phone">
-							<label for='phone'><span class="desktop-hidden">Контактный </span>телефон:</label>
+							<label for="phone"><span class="desktop-hidden">Контактный </span>телефон:</label>
 							<div class="feedback-form__input-wrap feedback-form__input-wrap--phone">
-								<input type="tel" id='phone' name='phone' placeholder='Введите телефон'>
+								<input type="tel" id="phone" name="phone" placeholder="Введите телефон">
 							</div>
 						</div>
 						<div class="feedback-form__user-contacts-item feedback-form__user-contacts-email">
-							<label for='email'>Электронная почта:</label>
+							<label for="email">Электронная почта:</label>
 							<div class="feedback-form__input-wrap feedback-form__input-wrap--email">
-								<input type="email" id='email' name='email' placeholder='Введите e-mail'>
+								<input type="email" id="email" name="email" placeholder="Введите e-mail">
 							</div>
 						</div>
 					</div>
 				</fieldset>
-				<fieldset class='feedback-form__impressions'>
+				<fieldset class="feedback-form__impressions">
 					<div class="feedback-form__fieldset-wrap feedback-form__fieldset-wrap--impressions">
-						<h2 class='feedback-form__impressions-headline feedback-form__fieldset-headline'>Ваше общее впечатление:</h2>
+						<h2 class="feedback-form__impressions-headline feedback-form__fieldset-headline">Ваше общее впечатление:</h2>
 						<div class="feedback-form__impressions-item">
 							<label for="good">
-								<input id='good' type="radio" name='impressions' value='good'>
+								<input id="good" type="radio" name="impressions" value="good">
 								<svg class="feedback-form__impressions-item-bg">
 									<circle class="feedback-form__circle-bg  feedback-form__circle-bg--outer" r="28" cx="50%" cy="50%" fill="#f2f2f2"></circle>
 									<circle class="feedback-form__circle-bg  feedback-form__circle-bg--inner" r="11" cx="50%" cy="50%" fill="#333333"></circle>
@@ -82,7 +82,7 @@
 						</div>
 						<div class="feedback-form__impressions-item">
 							<label for="bad">
-								<input id='bad' type="radio" name='impressions' value='bad'>
+								<input id="bad" type="radio" name="impressions" value="bad">
 								<svg class="feedback-form__impressions-item-bg">
 									<circle class="feedback-form__circle-bg  feedback-form__circle-bg--outer" r="28" cx="50%" cy="50%" fill="#f2f2f2"></circle>
 									<circle class="feedback-form__circle-bg  feedback-form__circle-bg--inner" r="11" cx="50%" cy="50%" fill="#333333"></circle>
@@ -92,7 +92,7 @@
 						</div>
 						<div class="feedback-form__impressions-item">
 							<label for="dont-know">
-								<input id='dont-know' type="radio" name='impressions' value='dont-know'>
+								<input id="dont-know" type="radio" name="impressions" value="dont-know">
 								<svg class="feedback-form__impressions-item-bg">
 									<circle class="feedback-form__circle-bg  feedback-form__circle-bg--outer" r="28" cx="50%" cy="50%" fill="#f2f2f2"></circle>
 									<circle class="feedback-form__circle-bg  feedback-form__circle-bg--inner" r="11" cx="50%" cy="50%" fill="#333333"></circle>
@@ -102,13 +102,13 @@
 						</div>
 					</div>
 				</fieldset>
-				<fieldset class='feedback-form__visited-places'>
+				<fieldset class="feedback-form__visited-places">
 					<div class="feedback-form__fieldset-wrap feedback-form__fieldset-wrap--places">
-						<h2 class='feedback-form__visited-places-headline feedback-form__fieldset-headline'>Посещенные достопримечательности</h2>
+						<h2 class="feedback-form__visited-places-headline feedback-form__fieldset-headline">Посещенные достопримечательности</h2>
 						<div class="feedback-form__items-container">
 							<div class="feedback-form__visited-places-item">
 								<label for="diablo-bridge">
-									<input id='diablo-bridge' type='checkbox' value='diablo-bridge'>
+									<input id="diablo-bridge" type="checkbox" value="diablo-bridge">
 									<svg class="feedback-form__visited-places-item-bg">
 										<rect class="feedback-form__rectangle-bg" width="56" height="56" rx="4" ry="4" fill="#f2f2f2"></rect>
 										<polyline class="feedback-form__tick-bg" points="17,25 26,35 40,17" stroke="#000" stroke-width="4" fill="none"></polyline>
@@ -118,7 +118,7 @@
 							</div>
 							<div class="feedback-form__visited-places-item">
 								<label for="slide-park">
-									<input id='slide-park' type='checkbox' value='slide-park'>
+									<input id="slide-park" type="checkbox" value="slide-park">
 									<svg class="feedback-form__visited-places-item-bg">
 										<rect class="feedback-form__rectangle-bg" width="56" height="56" rx="4" ry="4" fill="#f2f2f2"></rect>
 										<polyline class="feedback-form__tick-bg" points="17,25 26,35 40,17" stroke="#000" stroke-width="4" fill="none"></polyline>
@@ -128,7 +128,7 @@
 							</div>
 							<div class="feedback-form__visited-places-item">
 								<label for="bell-mountain">
-									<input id='bell-mountain' type='checkbox' value='bell-mountain'>
+									<input id="bell-mountain" type="checkbox" value="bell-mountain">
 									<svg class="feedback-form__visited-places-item-bg">
 										<rect class="feedback-form__rectangle-bg" width="56" height="56" rx="4" ry="4" fill="#f2f2f2"></rect>
 										<polyline class="feedback-form__tick-bg" points="17,25 26,35 40,17" stroke="#000" stroke-width="4" fill="none"></polyline>
@@ -138,7 +138,7 @@
 							</div>
 							<div class="feedback-form__visited-places-item">
 								<label for="red-rocks">
-									<input id='red-rocks' type='checkbox' value='red-rocks'>
+									<input id="red-rocks" type="checkbox" value="red-rocks">
 									<svg class="feedback-form__visited-places-item-bg">
 										<rect class="feedback-form__rectangle-bg" width="56" height="56" rx="4" ry="4" fill="#f2f2f2"></rect>
 										<polyline class="feedback-form__tick-bg" points="17,25 26,35 40,17" stroke="#000" stroke-width="4" fill="none"></polyline>
@@ -149,21 +149,21 @@
 						</div>
 					</div>
 				</fieldset>
-				<fieldset class='feedback-form__additional-info feedback-form__fieldset-wrap--info'>
+				<fieldset class="feedback-form__additional-info feedback-form__fieldset-wrap--info">
 					<div class="feedback-form__fieldset-wrap">
 						<label for="additional-info">
-							<span class='feedback-form__additional-info-headline feedback-form__fieldset-headline'>Опишите свои эмоции</span>
+							<span class="feedback-form__additional-info-headline feedback-form__fieldset-headline">Опишите свои эмоции</span>
 						</label>
-						<textarea class="feedback-form__textarea" name="additional-info" id="additional-info" cols="25" rows="5" placeholder='Опишите подробно все свои восторги'></textarea>
-						<button type="submit" class='feedback-form__submit-btn btn'>Отправить отзыв</button>
+						<textarea class="feedback-form__textarea" name="additional-info" id="additional-info" cols="25" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+						<button type="submit" class="feedback-form__submit-btn btn">Отправить отзыв</button>
 						<div class="feedback-form__required-fields-tip">* — обязательные поля</div>
 					</div>
 				</fieldset>
 				<div class="feedback-form__popup-message feedback-form__popup-message--failure">
 					<div class="feedback-form__message-wrap feedback-form__message-wrap--failure">
-						<h2>Что-то пошло<br class="mobile-hidden"> не так!</h2>
+						<h2>Что-то пошло не&nbsp;так!</h2>
 						<p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-						<button class="btn">Ок</button>
+						<a class="btn">Ок</a>
 					</div>
 				</div>
 				<div class="feedback-form__popup-message feedback-form__popup-message--success">
@@ -173,7 +173,7 @@
 						В ближайшее время мы опубликуем его на сайте.</p>
 					</div>
 					<div class="feedback-form__popup-btn-wrap">
-						<button class="btn">Закрыть окно</button>
+						<a class="btn">Закрыть окно</a>
 					</div>
 				</div>
 			</form>
@@ -182,7 +182,7 @@
 		<!-- Footer -->
 		<footer class="site-footer">
 			<div class="site-footer__wrap">
-				<p class='site-footer__hashtag hashtag'>#visitSEDONA</p>
+				<p class="site-footer__hashtag hashtag">#visitSEDONA</p>
 				<div class="site-footer__social social">
 					<a href="#" class="social-btn social-btn--tw">
 						<svg width="18" height="15" fill="#fff"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg>
@@ -195,10 +195,10 @@
 					</a>
 				</div>
 				<div class="site-footer__references">
-				<a href='https://htmlacademy.ru' class="site-footer__references-link">
-					Разработано
-					<svg class="logo-academy" width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
-				</a>
+					<a href="https://htmlacademy.ru" class="site-footer__references-link">
+						Разработано
+						<svg class="logo-academy" width="27" height="34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use></svg>
+					</a>
 				</div>
 			</div>
 		</footer>
