@@ -102,6 +102,11 @@
 		line-height: 36px;
 	}
 
+	.gallery__intro {
+		max-width: 85%;
+		margin: 26px auto 0 auto;
+	}
+
 	.gallery__content-wrap {
 		flex-direction: row;
 		flex-wrap: wrap;
@@ -177,6 +182,10 @@
 
 	.gallery__header {
 		margin-top: 102px;
+	}
+
+	.gallery__intro {
+		max-width: 47%;
 	}
 
 	.gallery__content-wrap {
